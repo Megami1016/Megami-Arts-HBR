@@ -1,0 +1,387 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    height: 100vh;
+  }
+  
+  .sidebar, .main { /*, .card-pool */
+    padding: 10px;
+    box-sizing: border-box;
+    overflow-y: auto;
+  }
+  
+  .sidebar { /*, .card-pool */
+    background-color: #f4f4f4;
+  }
+  
+  .main {
+    background-color: #fff;
+  }
+  
+  h2 {
+    margin: auto;
+    padding: auto;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    padding: 8px;
+    margin: 5px 0;
+    background-color: #ddd;
+    cursor: pointer;
+    border-radius: 4px;
+    text-align: center;
+  }
+  
+  li:hover {
+    background-color: #bbb;
+  }
+
+li:hover {
+  background-color: #bbb;
+}
+
+  /* カードアイテムのスタイル */
+  .card-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #888;
+    padding: 5px;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+  }
+    
+  /* 画像部分 */
+  .card-image {
+    width: 105px;  /* 画像の幅を固定 */
+    height: 145px;  /* 高さも固定 */
+    margin: 0 5px 0 5px;
+    object-fit: cover;  /* 画像が枠にフィットするようにする */
+    margin-bottom: 15px;  /* 画像と詳細の間にスペース */
+  }
+
+  /* カードの詳細部分 */
+  .card-details {
+    display: flex;
+    flex-direction: column;  /* 説明文と名前を縦に並べる */
+    text-align: center;
+    margin: 0 0 0 10px;
+    overflow: hidden;  /* 長いテキストをはみ出させない */
+    text-align: left;  /* 左寄せに設定 */
+  }
+
+  /* カード名 */
+  .card-details h3 {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0 0 5px 0;  /* 上部と下部に余白を設定 */
+    text-overflow: ellipsis;  /* 名前が長すぎる場合、省略表示 */
+    white-space: nowrap;  /* 改行させず一行で表示 */
+    overflow: hidden;  /* はみ出す部分を非表示 */
+  }
+
+  /* カード説明部分 */
+  .card-details p {
+    font-size: 12px;
+    color: #555;
+    margin: 0;
+    /*height: 50px;*/  /* 高さを固定 */
+    line-height: 1.4;
+    overflow: hidden;  /* 長すぎるテキストは非表示 */
+    text-overflow: ellipsis;  /* 長いテキストは省略表示 */
+    display: -webkit-box;
+    -webkit-line-clamp: 4;  /* 行数制限 (3行以内に収める) */
+    -webkit-box-orient: vertical;
+  }
+
+  .delete-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    font-size: 12px;
+    display: none; /* 初期状態では非表示 */
+  }
+
+  /* デッキエリア */
+  #deck-content {
+    width: 100%;
+    max-height: 100%;
+    border: 2px dashed #8f030360;
+    padding: 10px;
+    background-color: #f9f9f9;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start;
+  }
+  
+  #deck-content .card-container {
+    margin: 1px;  /* 各カード同士の間隔 */
+    /* 必要に応じて調整可能 */
+}
+  
+  #deck-content p {
+    font-size: 14px;
+    color: #888;
+  }
+  
+  .card-container {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+  }
+  
+  .card-container:hover .delete-button {
+    display: block; /* マウスホバー時に削除ボタンを表示 */
+  }
+
+  .card-description {
+    display: none; /* 初期状態では非表示 */
+    font-size: 12px;
+    color: #555;
+    margin-top: 5px;
+  }
+  
+  #search-form {
+    display: grid; /* グリッドレイアウトを使用 */
+    grid-template-columns: repeat(2, auto); /* 2列に分割 */
+    gap: 10px; /* 各要素の間隔 */
+    margin-bottom: 20px; /* 下部の余白 */
+}
+
+#search-form label {
+    font-size: 14px;
+    margin-right: 5px; /* ラベルと入力フィールドの間隔 */
+    white-space: nowrap; /* ラベルのテキストが折り返されないようにする */
+}
+
+#search-form input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 150px; /* 入力フィールドの幅を固定 */
+}
+
+#search-form button {
+    grid-column: 1 / span 2; /* ボタンを全幅に配置 */
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    justify-self: center; /* ボタンを中央に配置 */
+}
+
+#search-form button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 480px) {
+  #search-form {
+      grid-template-columns: 1fr; /* 1列に切り替え */
+  }
+  #search-form button {
+      justify-self: stretch; /* ボタンを幅いっぱいに */
+  }
+}
+
+.deck-edit {
+  display: flex;
+  align-items: center; /* 要素を縦方向で中央揃え */
+  justify-content: flex-start; /* 要素を左に寄せる */
+  gap: 10px; /* 文字と入力ボックス、ボタンの間にスペースを追加 */
+}
+
+.deck-edit-label {
+  margin-top: 0;
+}
+
+.favorite-toggle {
+  font-size: 20px;
+  margin-left: 10px;
+  user-select: none;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* 星に軽い影をつけて浮き上がらせる */
+}
+
+
+#reset-filters-button {
+  margin: 10px 0;
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#reset-filters-button:hover {
+  background-color: #0056b3;
+}
+
+/* ボタンを横並びにするためのスタイル */
+#filter-buttons-container {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px; /* ボタン間のスペース */
+  margin-bottom: 20px; /* ボタンと他の要素の間隔 */
+}
+
+/* ボタンの基本スタイル */
+#search-button, #reset-filters-button {
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#search-button:hover, #reset-filters-button:hover {
+  background-color: #0056b3;
+}
+
+/* チェックボックスとラベルを横並びに */
+#search-form input[type="checkbox"], #search-form label {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px; /* チェックボックスとラベルの間隔 */
+}
+
+/* チェックボックスが表示されるフォーム内でのスタイル調整 */
+#search-form input[type="checkbox"] {
+  width: auto; /* 幅は自動調整 */
+}
+
+/* デッキコントロールボタンのスタイル */
+.deck-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.deck-controls button {
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.deck-controls button:hover {
+  background-color: #0056b3;
+}
+/* コンテナ全体のスタイル */
+.deck-builder-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+/* 検索欄のスタイル */
+.search-container {
+  margin-bottom: 10px;
+}
+
+/* カードプール全体のスタイル */
+.card-pool-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%; /* 必要に応じて調整 */
+  max-height: 100%; /* 最大高さを指定（必要に応じて調整） */
+}
+
+.card-pool {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 2列のグリッド */
+  gap: 10px;
+  overflow-y: auto; /* 縦スクロールを有効にする */
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+/* デッキリスト全体のスタイル */
+.deck-container {
+  width: 40%;
+  border: 1px solid #ccc;
+  padding: 10px;
+  max-height: 400px; /* 高さ制限 */
+  overflow-y: auto; /* 縦スクロール可能 */
+}
+
+/* カードアイテムのスタイル */
+.card {
+  border: 1px solid #888;
+  padding: 5px;
+  text-align: center;
+  cursor: pointer;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 左右分割 */
+  height: 100vh;
+}
+
+.left-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  background-color: #f4f4f4;
+  overflow-y: auto; /* 左側のみスクロール可能 */
+}
+
+.card-pool-container {
+  flex-grow: 1;
+  overflow-y: auto; /* カードプール部分をスクロール可能に */
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #fff;
+}
+
+
+.right-panel {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.right-panel h2 {
+  margin: 0 0 20px 0;
+  text-align: center;
+}
+
+.deck-content {
+  flex-grow: 1;
+  border: 2px dashed #ccc;
+  padding: 10px;
+  background-color: #f9f9f9;
+  overflow-y: auto;
+}

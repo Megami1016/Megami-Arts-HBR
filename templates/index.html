@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>デッキビルダー</title>
+  <link rel="stylesheet" href="/static/styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- 左側: コントロールエリア -->
+    <div class="left-panel">
+      <div class="deck-controls">
+        <!-- <button id="share-twitter-button">Twitterで共有</button>
+        <button id="share-discord-button">Discordで共有</button> -->
+        <button id="download-deck-button">デッキを画像としてダウンロード</button>
+      </div>
+      <div class="search-container">
+        <form id="search-form">
+          <label for="cost">消費ターン:</label>
+          <input type="text" id="cost" name="cost" placeholder="Enter cost">
+      
+          <label for="style">スタイル:</label>
+          <select id="style" name="style">
+              <option value="">未選択</option>
+              <option value="A">A</option>
+              <option value="S">S</option>
+              <option value="SS">SS</option>
+          </select>
+      
+          <label for="unit">部隊:</label>
+          <select id="unit" name="unit">
+              <option value="">未選択</option>
+              <option value="31A">31A</option>
+              <option value="31B">31B</option>
+              <option value="31C">31C</option>
+              <option value="31D">31D</option>
+              <option value="31E">31E</option>
+              <option value="31F">31F</option>
+          </select>
+      
+          <label for="type">カード効果:</label>
+          <select id="type" name="type">
+              <option value="">指定なし</option>
+              <option value="ステータスUP">ステータスUP</option>
+              <option value="パワー">パワー</option>
+              <option value="タフネス">タフネス</option>
+              <option value="バフ">バフ</option>
+              <option value="敵弱体化">敵弱体化</option>
+              <option value="ノーマル">ノーマル討伐</option>
+              <option value="エース">エース討伐</option>
+              <option value="討伐（全対象）">討伐（全対象）</option>
+              <option value="バースト">バースト</option>
+              <option value="DP復活">DP復活</option>
+              <option value="SP回復">SP回復</option>
+              <option value="スキル回数回復">スキル回数回復</option>
+              <option value="コピー">コピー</option>
+              <option value="ドロー">カードドロー</option>
+              <option value="捨て札回収">捨て札回収</option>
+              <option value="延長">ターン延長</option>
+              <option value="変化">カード変化</option>
+              <option value="カード追加">カード追加</option>
+              <option value="消費軽減">消費軽減</option>
+              <option value="捨て札効果">捨て札効果</option>
+              <option value="発動回数制限">発動回数制限</option>
+              <option value="経験値上昇">経験値上昇</option>
+              <option value="スコアボーナス">スコアボーナス</option>
+              <option value="除外">除外</option>
+          </select>
+          <label>
+            <input type="checkbox" id="show-favorites"> お気に入りのみ表示
+          </label>
+      
+          <div id="filter-buttons-container">
+            <button type="button" id="search-button">絞り込み</button>
+            <!-- <button id="reset-filters-button">条件を初期化</button> -->
+          </div>
+        </form>
+      </div>
+      <div class="card-pool-container">
+        <div id="card-pool-content" class="card-pool">
+          <!-- カード一覧が生成される -->
+        </div>
+      </div>
+    </div>
+    
+    <!-- 右側: デッキ編集エリア -->
+    <div class="right-panel">
+      <h2>デッキ編集</h2>
+      <div id="deck-content" class="deck-content" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <!-- ドロップエリア -->
+      </div>
+    </div>
+  </div>
+  <script src="/static/scripts.js"></script>
+</body>
+</html>

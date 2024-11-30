@@ -1,0 +1,603 @@
+[
+    {
+      "id": "A_茅森月歌",
+      "name": "A_茅森月歌",
+      "effect": "「エネミーを討伐する度 パワー+1 タフネス+1」のエンチャントを付与(35回) / このアーツをゲームから除外",
+      "cost": 3,
+      "style": "A",
+      "image": "/static/images/A_茅森月歌.png",
+      "unit": "31A",
+      "type": "ステータスUP/除外"
+    },
+    {
+      "id": "A_和泉ユキ",
+      "name": "A_和泉ユキ",
+      "effect": "【31A】のアーツを2枚ドロー",
+      "cost": 1,
+      "style": "A",
+      "image": "/static/images/A_和泉ユキ.png",
+      "unit": "31A",
+      "type": "ドロー"
+    },
+    {
+      "id": "A_逢川めぐみ",
+      "name": "A_逢川めぐみ",
+      "effect": "バトル開始時 敵の全能力-30(1回)",
+      "cost": 1,
+      "style": "A",
+      "image": "/static/images/A_逢川めぐみ.png",
+      "unit": "31A",
+      "type": "敵弱体化/発動回数制限"
+    },
+    {
+      "id": "A_東城つかさ",
+      "name": "A_東城つかさ",
+      "effect": "パワー+30(1回)",
+      "cost": 1,
+      "style": "A",
+      "image": "/static/images/A_東城つかさ.png",
+      "unit": "31A",
+      "type": "パワー/発動回数制限"
+    },
+    {
+      "id": "A_朝倉可憐",
+      "name": "A_朝倉可憐",
+      "effect": "パワー+5",
+      "cost": 1,
+      "style": "A",
+      "image": "/static/images/A_朝倉可憐.png",
+      "unit": "31A",
+      "type": "ステータスUP"
+    },
+    {
+      "id": "A_國見タマ",
+      "name": "A_國見タマ",
+      "effect": "パーティのSPを6回復",
+      "cost": 1,
+      "style": "A",
+      "image": "/static/images/A_國見タマ.png",
+      "unit": "31A",
+      "type": "SP回復"
+    },
+    {
+      "id": "S_茅森月歌",
+      "name": "S_茅森月歌",
+      "effect": "ランダムなノーマルエネミーを1枚討伐",
+      "cost": 2,
+      "style": "S",
+      "image": "/static/images/S_茅森月歌.png",
+      "unit": "31A",
+      "type": "ノーマル"
+    },
+    {
+      "id": "S_和泉ユキ",
+      "name": "S_和泉ユキ",
+      "effect": "【Sレア】のアーツを1枚ドロー /【SSレア】のアーツを1枚ドロー",
+      "cost": 1,
+      "style": "S",
+      "image": "/static/images/S_和泉ユキ.png",
+      "unit": "31A",
+      "type": "ドロー"
+    },
+    {
+      "id": "S_逢川めぐみ",
+      "name": "S_逢川めぐみ",
+      "effect": "バトル開始時 敵の全能力-50(1回)",
+      "cost": 1,
+      "style": "S",
+      "image": "/static/images/S_逢川めぐみ.png",
+      "unit": "31A",
+      "type": "敵弱体化/発動回数制限"
+    },
+    {
+      "id": "S_東城つかさ",
+      "name": "S_東城つかさ",
+      "effect": "パワー+50%(1回)",
+      "cost": 2,
+      "style": "S",
+      "image": "/static/images/S_東城つかさ.png",
+      "unit": "31A",
+      "type": "パワー/発動回数制限"
+    },
+    {
+      "id": "S_朝倉可憐",
+      "name": "S_朝倉可憐",
+      "effect": "パワー+30% / このアーツをゲームから除外",
+      "cost": 3,
+      "style": "S",
+      "image": "/static/images/S_朝倉可憐.png",
+      "unit": "31A",
+      "type": "パワー/除外"
+    },
+    {
+      "id": "S_國見タマ",
+      "name": "S_國見タマ",
+      "effect": "「毎ターンSP+1（前衛）」のエンチャントを付与（3回まで重ねがけ可能）",
+      "cost": 3,
+      "style": "S",
+      "image": "/static/images/S_國見タマ.png",
+      "unit": "31A",
+      "type": "SP回復/発動回数制限"
+    },
+    {
+      "id": "SS_茅森月歌",
+      "name": "SS_茅森月歌",
+      "effect": "エースエネミーを1枚ドロー / ランダムなエースエネミーを1枚討伐 討伐数5以上で使用可能",
+      "cost": 3,
+      "style": "SS",
+      "image": "/static/images/SS_茅森月歌.png",
+      "unit": "31A",
+      "type": "ドロー/エース"
+    },
+    {
+      "id": "SS_和泉ユキ",
+      "name": "SS_和泉ユキ",
+      "effect": "【SSレア】のアーツを2枚ドロー / 次に使用するアーツの消費ターン0(2回) 討伐数5以上で使用可能",
+      "cost": 3,
+      "style": "SS",
+      "image": "/static/images/SS_和泉ユキ.png",
+      "unit": "31A",
+      "type": "ドロー/発動回数制限"
+    },
+    {
+      "id": "SS_逢川めぐみ",
+      "name": "SS_逢川めぐみ",
+      "effect": "3枚バースト(左から順にアーツを消費ターン0で発動し、エネミーを討伐) 討伐数5以上で使用可能",
+      "cost": 3,
+      "style": "SS",
+      "image": "/static/images/SS_逢川めぐみ.png",
+      "unit": "31A",
+      "type": "バースト"
+    },
+    {
+      "id": "SS_東城つかさ",
+      "name": "SS_東城つかさ",
+      "effect": "次に使用するアーツ効果が2回発動(1回) 討伐数5以上で使用可能",
+      "cost": 3,
+      "style": "SS",
+      "image": "/static/images/SS_東城つかさ.png",
+      "unit": "31A",
+      "type": "発動回数制限"
+    },
+    {
+      "id": "SS_朝倉可憐",
+      "name": "SS_朝倉可憐",
+      "effect": "パワーをタフネスにコピー / このアーツをゲームから除外 討伐数5以上で使用可能",
+      "cost": 4,
+      "style": "SS",
+      "image": "/static/images/SS_朝倉可憐.png",
+      "unit": "31A",
+      "type": "コピー/除外"
+    },
+    {
+      "id": "SS_國見タマ",
+      "name": "SS_國見タマ",
+      "effect": "ボス登場までのターンを5ターン延長",
+      "cost": 2,
+      "style": "SS",
+      "image": "/static/images/SS_國見タマ.png",
+      "unit": "31A",
+      "type": "延長"
+    },
+    {
+      "id": "SS_茅森月歌（水着）",
+      "name": "SS_茅森月歌（水着）",
+      "effect": "場の全てのエネミーを討伐 / このアーツをゲームから除外 / バースト対象外 討伐数25以上で使用可能",
+      "cost": 1,
+      "style": "SS",
+      "image": "/static/images/SS_茅森月歌（水着）.png",
+      "unit": "31A",
+      "type": "討伐（全対象）/除外"
+    },
+    {
+      "id": "SS_和泉ユキ（水着）",
+      "name": "SS_和泉ユキ（水着）",
+      "effect": "全体のスキル回数を4回復する（スキル回数の回復スキルを除く） / このアーツをゲームから除外 / バースト対象外 討伐数25以上で使用可能",
+      "cost": 5,
+      "style": "SS",
+      "image": "/static/images/SS_和泉ユキ（水着）.png",
+      "unit": "31A",
+      "type": "スキル回数回復/除外"
+    },
+    {
+      "id": "SS_逢川めぐみ（水着）",
+      "name": "SS_逢川めぐみ（水着）",
+      "effect": "ボスエネミーとのバトル開始時 敵の全能力-200(1回) / このアーツをゲームから除外 / バースト対象外 討伐数25以上で使用可能",
+      "cost": 5,
+      "style": "SS",
+      "image": "/static/images/SS_逢川めぐみ（水着）.png",
+      "unit": "31A",
+      "type": "敵弱体化/発動回数制限/除外"
+    },
+    {
+      "id": "SS_東城つかさ（水着）",
+      "name": "SS_東城つかさ（水着）",
+      "effect": "「ノーマルエネミーとのバトル開始時 前衛にスキル攻撃力+80%(1回)」を付与(永続) / このアーツをゲームから除外 / バースト対象外 討伐数25以上で使用可能",
+      "cost": 5,
+      "style": "SS",
+      "image": "/static/images/SS_東城つかさ（水着）.png",
+      "unit": "31A",
+      "type": "バフ/除外"
+    },
+    {
+      "id": "SS_朝倉可憐（水着）",
+      "name": "SS_朝倉可憐（水着）",
+      "effect": "「獲得スコア / 経験値が200%上昇(3回)」のエンチャントを付与 / ランダムなエネミーを3枚討伐 / このアーツをゲームから除外 / バースト対象外 討伐数25以上で使用可能",
+      "cost": 5,
+      "style": "SS",
+      "image": "/static/images/SS_朝倉可憐（水着）.png",
+      "unit": "31A",
+      "type": "スコアボーナス/経験値上昇/発動回数制限/討伐（全対象）/除外"
+    },
+    {
+      "id": "SS_國見タマ（水着）",
+      "name": "SS_國見タマ（水着）",
+      "effect": "パーティのDPを完全復活させる / このアーツをゲームから除外 / バースト対象外 討伐数25以上で使用可能",
+      "cost": 1,
+      "style": "SS",
+      "image": "/static/images/SS_國見タマ（水着）.png",
+      "unit": "31A",
+      "type": "DP復活/除外"
+    },
+    {
+      "id": "A_蒼井えりか",
+      "name": "A_蒼井えりか",
+      "effect": "タフネス+5 / アーツ効果で捨て札に置かれた時 タフネス+5",
+      "cost": 1,
+      "style": "A",
+      "image": "/static/images/A_蒼井えりか.png",
+      "unit": "31B",
+      "type": "タフネス/捨て札効果"
+    },
+    {
+      "id": "A_水瀬いちご",
+      "name": "A_水瀬いちご",
+      "effect": "パワー+10 / タフネス+10 / 累計捨て札数5枚につき消費ターン1ターン軽減（最小2）",
+      "cost": 6,
+      "style": "A",
+      "image": "/static/images/A_水瀬いちご.png",
+      "unit": "31B",
+      "type": "ステータスUP/消費軽減"
+    },
+    {
+      "id": "A_水瀬すもも",
+      "name": "A_水瀬すもも",
+      "effect": "ランダムなアーツを1枚捨て札に置き パワー+10",
+      "cost": 0,
+      "style": "A",
+      "image": "/static/images/A_水瀬すもも.png",
+      "unit": "31B",
+      "type": "パワー"
+    },
+    {
+      "id": "A_樋口聖華",
+      "name": "A_樋口聖華",
+      "effect": "デッキのランダムなアーツを1枚捨て札に置き【31B】のアーツを2枚ドロー",
+      "cost": 0,
+      "style": "A",
+      "image": "/static/images/A_樋口聖華.png",
+      "unit": "31B",
+      "type": "ドロー"
+    },
+    {
+      "id": "A_柊木梢",
+      "name": "A_柊木梢",
+      "effect": "捨て札のランダムなアーツを1枚場に戻す",
+      "cost": 1,
+      "style": "A",
+      "image": "/static/images/A_柊木梢.png",
+      "unit": "31B",
+      "type": "捨て札回収"
+    },
+    {
+      "id": "A_ビャッコ",
+      "name": "A_ビャッコ",
+      "effect": "パワー+5 / アーツ効果で捨て札に置かれた時 パワー+5",
+      "cost": 1,
+      "style": "A",
+      "image": "/static/images/A_ビャッコ.png",
+      "unit": "31B",
+      "type": "パワー/捨て札効果"
+    },
+    {
+      "id": "S_蒼井えりか",
+      "name": "S_蒼井えりか",
+      "effect": "タフネス+5 / アーツ効果で捨て札に置かれた時 タフネス+10%",
+      "cost": 1,
+      "style": "S",
+      "image": "/static/images/S_蒼井えりか.png",
+      "unit": "31B",
+      "type": "タフネス/捨て札効果"
+    },
+    {
+      "id": "S_水瀬いちご",
+      "name": "S_水瀬いちご",
+      "effect": "ランダムなエネミーを1枚討伐 / 累計捨て札数5枚につき消費ターン1ターン軽減（最小1）",
+      "cost": 4,
+      "style": "S",
+      "image": "/static/images/S_水瀬いちご.png",
+      "unit": "31B",
+      "type": "討伐（全対象）/消費軽減"
+    },
+    {
+      "id": "S_水瀬すもも",
+      "name": "S_水瀬すもも",
+      "effect": "ランダムなアーツを1枚捨て札に置き ランダムなノーマルエネミーを1枚討伐",
+      "cost": 0,
+      "style": "S",
+      "image": "/static/images/S_水瀬すもも.png",
+      "unit": "31B",
+      "type": "ノーマル"
+    },
+    {
+      "id": "S_樋口聖華",
+      "name": "S_樋口聖華",
+      "effect": "デッキのランダムな【消費ターン1】アーツを1枚捨て札に置き パーティのSPを6回復",
+      "cost": 0,
+      "style": "S",
+      "image": "/static/images/S_樋口聖華.png",
+      "unit": "31B",
+      "type": "SP回復"
+    },
+    {
+      "id": "S_柊木梢",
+      "name": "S_柊木梢",
+      "effect": "捨て札の【消費ターン1】のアーツを2枚場に戻す",
+      "cost": 2,
+      "style": "S",
+      "image": "/static/images/S_柊木梢.png",
+      "unit": "31B",
+      "type": "捨て札回収"
+    },
+    {
+      "id": "S_ビャッコ",
+      "name": "S_ビャッコ",
+      "effect": "パワー+5 / アーツ効果で捨て札に置かれた時 ランダムなノーマルエネミーを1枚討伐",
+      "cost": 1,
+      "style": "S",
+      "image": "/static/images/S_ビャッコ.png",
+      "unit": "31B",
+      "type": "パワー/捨て札効果/ノーマル"
+    },
+    {
+      "id": "SS_蒼井えりか",
+      "name": "SS_蒼井えりか",
+      "effect": "タフネス+5 / アーツ効果で捨て札に置かれた時 「A_蒼井えりか」・「S_蒼井えりか」をデッキに2枚ずつ追加",
+      "cost": 1,
+      "style": "SS",
+      "image": "/static/images/SS_蒼井えりか.png",
+      "unit": "31B",
+      "type": "タフネス/捨て札効果/カード追加"
+    },
+    {
+      "id": "SS_水瀬いちご",
+      "name": "SS_水瀬いちご",
+      "effect": "ランダムなエネミーを3枚討伐 / 累計捨て札数5枚につき消費ターン1ターン軽減（最小1）",
+      "cost": 9,
+      "style": "SS",
+      "image": "/static/images/SS_水瀬いちご.png",
+      "unit": "31B",
+      "type": "討伐（全対象）/消費軽減"
+    },
+    {
+      "id": "SS_水瀬すもも",
+      "name": "SS_水瀬すもも",
+      "effect": "累計捨て札数1枚につき「パワー+1」(最大+50) / このアーツをゲームから除外",
+      "cost": 5,
+      "style": "SS",
+      "image": "/static/images/SS_水瀬すもも.png",
+      "unit": "31B",
+      "type": "パワー/除外"
+    },
+    {
+      "id": "SS_樋口聖華",
+      "name": "SS_樋口聖華",
+      "effect": "デッキのランダムな【SSレア】のアーツを1枚捨て札に置き ボス登場までのターンを4ターン延長",
+      "cost": 0,
+      "style": "SS",
+      "image": "/static/images/SS_樋口聖華.png",
+      "unit": "31B",
+      "type": "延長"
+    },
+    {
+      "id": "SS_柊木梢",
+      "name": "SS_柊木梢",
+      "effect": "捨て札のランダムなアーツを最大3枚場に戻す",
+      "cost": 3,
+      "style": "SS",
+      "image": "/static/images/SS_柊木梢.png",
+      "unit": "31B",
+      "type": "捨て札回収"
+    },
+    {
+      "id": "SS_ビャッコ",
+      "name": "SS_ビャッコ",
+      "effect": "「アーツがアーツ効果で捨て札に置かれる度 パワー+2 タフネス+2」のエンチャントを付与(15回) / このアーツをゲームから除外",
+      "cost": 3,
+      "style": "SS",
+      "image": "/static/images/SS_ビャッコ.png",
+      "unit": "31B",
+      "type": "ステータスUP/除外"
+    },
+    {
+      "id": "A_山脇_ボン_イヴァール",
+      "name": "A_山脇_ボン_イヴァール",
+      "effect": "「アーツを使用する度 パワー+2 タフネス+1」のエンチャントを付与(20回) / このアーツをゲームから除外",
+      "cost": 3,
+      "style": "A",
+      "image": "/static/images/A_山脇_ボン_イヴァール.png",
+      "unit": "31C",
+      "type": "ステータスUP/除外"
+    },
+    {
+      "id": "A_桜庭聖羅",
+      "name": "A_桜庭聖羅",
+      "effect": "【31C】のアーツを2枚ドロー",
+      "cost": 1,
+      "style": "A",
+      "image": "/static/images/A_桜庭聖羅.png",
+      "unit": "31C",
+      "type": "ドロー"
+    },
+    {
+      "id": "A_天音巫呼",
+      "name": "A_天音巫呼",
+      "effect": "【左から1番目】のカードを捨て札に置く / アーツを1枚ドロー",
+      "cost": 1,
+      "style": "A",
+      "image": "/static/images/A_天音巫呼.png",
+      "unit": "31C",
+      "type": "ドロー"
+    },
+    {
+      "id": "A_豊後弥生",
+      "name": "A_豊後弥生",
+      "effect": "【左から1番目】のカードを「S_山脇・ボン・イヴァール」に変化",
+      "cost": 2,
+      "style": "A",
+      "image": "/static/images/A_豊後弥生.png",
+      "unit": "31C",
+      "type": "変化"
+    },
+    {
+      "id": "A_神崎アーデルハイド",
+      "name": "A_神崎アーデルハイド",
+      "effect": "パワー+5 / タフネス+5",
+      "cost": 2,
+      "style": "A",
+      "image": "/static/images/A_神崎アーデルハイド.png",
+      "unit": "31C",
+      "type": "ステータスUP"
+    },
+    {
+      "id": "A_佐月マリ",
+      "name": "A_佐月マリ",
+      "effect": "パーティのSPを6回復",
+      "cost": 1,
+      "style": "A",
+      "image": "/static/images/A_佐月マリ.png",
+      "unit": "31C",
+      "type": "SP回復"
+    },
+    {
+      "id": "S_山脇_ボン_イヴァール",
+      "name": "S_山脇_ボン_イヴァール",
+      "effect": "次に使用する【31C】のアーツの消費ターンを-2(1回)",
+      "cost": 0,
+      "style": "S",
+      "image": "/static/images/S_山脇_ボン_イヴァール.png",
+      "unit": "31C",
+      "type": "消費軽減/発動回数制限"
+    },
+    {
+      "id": "S_桜庭聖羅",
+      "name": "S_桜庭聖羅",
+      "effect": "パワー+10 / タフネス+10 / 場の他のアーツ1枚につき消費ターン1ターン軽減（最小0）",
+      "cost": 4,
+      "style": "S",
+      "image": "/static/images/S_桜庭聖羅.png",
+      "unit": "31C",
+      "type": "ステータスUP/消費軽減"
+    },
+    {
+      "id": "S_天音巫呼",
+      "name": "S_天音巫呼",
+      "effect": "【左から1番目】のエネミーを討伐",
+      "cost": 3,
+      "style": "S",
+      "image": "/static/images/S_天音巫呼.png",
+      "unit": "31C",
+      "type": "討伐（全対象）"
+    },
+    {
+      "id": "S_豊後弥生",
+      "name": "S_豊後弥生",
+      "effect": "「S_山脇・ボン・イヴァール」をデッキに3枚追加",
+      "cost": 1,
+      "style": "S",
+      "image": "/static/images/S_豊後弥生.png",
+      "unit": "31C",
+      "type": "カード追加"
+    },
+    {
+      "id": "S_神崎アーデルハイド",
+      "name": "S_神崎アーデルハイド",
+      "effect": "【左から1番目】のカードを「A_神崎アーデルハイド」に変化",
+      "cost": 2,
+      "style": "S",
+      "image": "/static/images/S_神崎アーデルハイド.png",
+      "unit": "31C",
+      "type": "変化"
+    },
+    {
+      "id": "S_佐月マリ",
+      "name": "S_佐月マリ",
+      "effect": "「カードが変化する度 パワー+2」のエンチャントを付与(15回) / このアーツをゲームから除外",
+      "cost": 3,
+      "style": "S",
+      "image": "/static/images/S_佐月マリ.png",
+      "unit": "31C",
+      "type": "パワー/除外"
+    },
+    {
+      "id": "SS_山脇_ボン_イヴァール",
+      "name": "SS_山脇_ボン_イヴァール",
+      "effect": "【31C】のアーツの消費ターン-1(重ねがけ不可) / このアーツをゲームから除外",
+      "cost": 5,
+      "style": "SS",
+      "image": "/static/images/SS_山脇_ボン_イヴァール.png",
+      "unit": "31C",
+      "type": "消費軽減/除外"
+    },
+    {
+      "id": "SS_桜庭聖羅",
+      "name": "SS_桜庭聖羅",
+      "effect": "「バトル開始時 クリティカル率+100%(3ターン)」のエンチャントを付与(3回) / 場の他のアーツ1枚につき消費ターン1ターン軽減（最小1）",
+      "cost": 5,
+      "style": "SS",
+      "image": "/static/images/SS_桜庭聖羅.png",
+      "unit": "31C",
+      "type": "バフ/消費軽減"
+    },
+    {
+      "id": "SS_天音巫呼",
+      "name": "SS_天音巫呼",
+      "effect": "【左から1番目】のカードを複製",
+      "cost": 3,
+      "style": "SS",
+      "image": "/static/images/SS_天音巫呼.png",
+      "unit": "31C",
+      "type": "コピー"
+    },
+    {
+      "id": "SS_豊後弥生",
+      "name": "SS_豊後弥生",
+      "effect": "「消費ターンが軽減されたアーツを使用する度 パワー+5」のエンチャントを付与(15回) / このアーツをゲームから除外",
+      "cost": 3,
+      "style": "SS",
+      "image": "/static/images/SS_豊後弥生.png",
+      "unit": "31C",
+      "type": "パワー/除外"
+    },
+    {
+      "id": "SS_神崎アーデルハイド",
+      "name": "SS_神崎アーデルハイド",
+      "effect": "「S_神崎アーデルハイド」を場に最大6枚追加",
+      "cost": 4,
+      "style": "SS",
+      "image": "/static/images/SS_神崎アーデルハイド.png",
+      "unit": "31C",
+      "type": "カード追加"
+    },
+    {
+      "id": "SS_佐月マリ",
+      "name": "SS_佐月マリ",
+      "effect": "全てのエネミーを「A_佐月マリ」に変化",
+      "cost": 4,
+      "style": "SS",
+      "image": "/static/images/SS_佐月マリ.png",
+      "unit": "31C",
+      "type": "変化"
+    }
+  ]
+  

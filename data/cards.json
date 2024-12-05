@@ -598,6 +598,549 @@
       "image": "/static/images/SS_佐月マリ.png",
       "unit": "31C",
       "type": "変化"
+    },
+    {
+      "id": "A_二階堂三郷",
+      "name": "A_二階堂三郷",
+      "effect": "タフネス+5 / このアーツをゲームから除外",
+      "cost": 0,
+      "style": "A",
+      "image": "/static/images/A_二階堂三郷.png",
+      "unit": "31D",
+      "type": "タフネス/除外"
+    },
+    {
+      "id": "A_石井色葉",
+      "name": "A_石井色葉",
+      "effect": " アーツを1枚ドロー / このアーツをゲームから除外",
+      "cost": 0,
+      "style": "A",
+      "image": "/static/images/A_石井色葉.png",
+      "unit": "31D",
+      "type": "ドロー/除外"
+    },
+    {
+      "id": "A_命吹雪",
+      "name": "A_命吹雪",
+      "effect": "パワー+5 / このアーツをゲームから除外",
+      "cost": 0,
+      "style": "A",
+      "image": "/static/images/A_命吹雪.png",
+      "unit": "31D",
+      "type": "パワー/除外"
+    },
+    {
+      "id": "A_室伏理沙",
+      "name": "A_室伏理沙",
+      "effect": "パーティのSPを3回復 / このアーツをゲームから除外",
+      "cost": 0,
+      "style": "A",
+      "image": "/static/images/A_室伏理沙.png",
+      "unit": "31D",
+      "type": "SP回復/除外"
+    },
+    {
+      "id": "A_伊達朱里",
+      "name": "A_伊達朱里",
+      "effect": "ランダムなエースエネミーを1枚討伐 / このアーツをゲームから除外",
+      "cost": 1,
+      "style": "A",
+      "image": "/static/images/A_伊達朱里.png",
+      "unit": "31D",
+      "type": "エース/除外"
+    },
+    {
+      "id": "A_瑞原あいな",
+      "name": "A_瑞原あいな",
+      "effect": "オーバードライブゲージ+15% / このアーツをゲームから除外",
+      "cost": 0,
+      "style": "A",
+      "image": "/static/images/A_瑞原あいな.png",
+      "unit": "31D",
+      "type": "OD増加/除外"
+    },
+    {
+      "id": "S_二階堂三郷",
+      "name": "S_二階堂三郷",
+      "effect": "「リフレッシュする度 タフネス+20」のエンチャントを付与(4回) / このアーツをゲームから除外",
+      "cost": 3,
+      "style": "S",
+      "image": "/static/images/S_二階堂三郷.png",
+      "unit": "31D",
+      "type": "タフネス/除外"
+    },
+    {
+      "id": "S_石井色葉",
+      "name": "S_石井色葉",
+      "effect": " 「A_石井色葉」をデッキに3枚追加",
+      "cost": 1,
+      "style": "S",
+      "image": "/static/images/S_石井色葉.png",
+      "unit": "31D",
+      "type": "カード追加"
+    },
+    {
+      "id": "S_命吹雪",
+      "name": "S_命吹雪",
+      "effect": "パワー+30% / このアーツをゲームから除外",
+      "cost": 3,
+      "style": "S",
+      "image": "/static/images/S_命吹雪.png",
+      "unit": "31D",
+      "type": "パワー/除外"
+    },
+    {
+      "id": "S_室伏理沙",
+      "name": "S_室伏理沙",
+      "effect": " 「A_室伏理沙」をデッキに3枚追加",
+      "cost": 2,
+      "style": "S",
+      "image": "/static/images/S_室伏理沙.png",
+      "unit": "31D",
+      "type": "カード追加"
+    },
+    {
+      "id": "S_伊達朱里",
+      "name": "S_伊達朱里",
+      "effect": "ランダムなエースエネミーを2枚討伐 / このアーツをゲームから除外",
+      "cost": 2,
+      "style": "S",
+      "image": "/static/images/S_伊達朱里.png",
+      "unit": "31D",
+      "type": "エース/除外"
+    },
+    {
+      "id": "S_瑞原あいな",
+      "name": "S_瑞原あいな",
+      "effect": " 「A_瑞原あいな」をデッキに3枚追加",
+      "cost": 2,
+      "style": "S",
+      "image": "/static/images/S_瑞原あいな.png",
+      "unit": "31D",
+      "type": "カード追加"
+    },
+    {
+      "id": "SS_二階堂三郷",
+      "name": "SS_二階堂三郷",
+      "effect": "ゲーム開始時必ずドロー / 残デッキ数1枚につき「パワー+1 / タフネス+1」(最大+50) / このアーツをゲームから除外",
+      "cost": 2,
+      "style": "SS",
+      "image": "/static/images/SS_二階堂三郷.png",
+      "unit": "31D",
+      "type": "ステータスUP/除外"
+    },
+    {
+      "id": "SS_石井色葉",
+      "name": "SS_石井色葉",
+      "effect": " 「アーツをゲームから除外する度【31D】のアーツを1枚ドロー」のエンチャントを付与(10回) / このアーツをゲームから除外",
+      "cost": 4,
+      "style": "SS",
+      "image": "/static/images/SS_石井色葉.png",
+      "unit": "31D",
+      "type": "ドロー/除外"
+    },
+    {
+      "id": "SS_命吹雪",
+      "name": "SS_命吹雪",
+      "effect": "「リフレッシュする度 パワー+20」のエンチャントを付与(4回) / このアーツをゲームから除外",
+      "cost": 3,
+      "style": "SS",
+      "image": "/static/images/SS_命吹雪.png",
+      "unit": "31D",
+      "type": "パワー/除外"
+    },
+    {
+      "id": "SS_室伏理沙",
+      "name": "SS_室伏理沙",
+      "effect": "ゲーム開始時必ずドロー / 【31D】のAスタイルアーツをデッキに2枚ずつ追加 / このアーツをゲームから除外",
+      "cost": 3,
+      "style": "SS",
+      "image": "/static/images/SS_室伏理沙.png",
+      "unit": "31D",
+      "type": "カード追加/除外"
+    },
+    {
+      "id": "SS_伊達朱里",
+      "name": "SS_伊達朱里",
+      "effect": "ランダムなエネミーを2枚討伐 / 「A_伊達朱里」をデッキに1枚追加",
+      "cost": 3,
+      "style": "SS",
+      "image": "/static/images/SS_伊達朱里.png",
+      "unit": "31D",
+      "type": "討伐（全対象）/カード追加"
+    },
+    {
+      "id": "SS_瑞原あいな",
+      "name": "SS_瑞原あいな",
+      "effect": " 「アーツをゲームから除外する度 パワー+5」のエンチャントを付与(15回) / このアーツをゲームから除外",
+      "cost": 3,
+      "style": "SS",
+      "image": "/static/images/SS_瑞原あいな.png",
+      "unit": "31D",
+      "type": "パワー/除外"
+    },
+    {
+      "id": "A_大島一千子",
+      "name": "A_大島一千子",
+      "effect": "「アーツをドローする度 タフネス+1」のエンチャントを付与(50回) / このアーツをゲームから除外",
+      "cost": 3,
+      "style": "A",
+      "image": "/static/images/A_大島一千子.png",
+      "unit": "31E",
+      "type": "タフネス/除外"
+    },
+    {
+      "id": "A_大島二似奈",
+      "name": "A_大島二似奈",
+      "effect": " パワー+10 / タフネス+5",
+      "cost": 3,
+      "style": "A",
+      "image": "/static/images/A_大島二似奈.png",
+      "unit": "31E",
+      "type": "ステータスUP"
+    },
+    {
+      "id": "A_大島三野里",
+      "name": "A_大島三野里",
+      "effect": "【消費ターンが3ターン】のアーツを1枚ドロー / パワー+5",
+      "cost": 2,
+      "style": "A",
+      "image": "/static/images/A_大島三野里.png",
+      "unit": "31E",
+      "type": "ドロー/パワー"
+    },
+    {
+      "id": "A_大島四ツ葉",
+      "name": "A_大島四ツ葉",
+      "effect": "「経験値が100%上昇(1回)」のエンチャントを付与",
+      "cost": 1,
+      "style": "A",
+      "image": "/static/images/A_大島四ツ葉.png",
+      "unit": "31E",
+      "type": "経験値上昇"
+    },
+    {
+      "id": "A_大島五十鈴",
+      "name": "A_大島五十鈴",
+      "effect": "場にあるカードを全てデッキに戻す",
+      "cost": 0,
+      "style": "A",
+      "image": "/static/images/A_大島五十鈴.png",
+      "unit": "31E",
+      "type": "デッキに返還"
+    },
+    {
+      "id": "A_大島六宇亜",
+      "name": "A_大島六宇亜",
+      "effect": "「バトル開始時SP+1」のエンチャントを付与(4回まで重ねがけ可能)",
+      "cost": 3,
+      "style": "A",
+      "image": "/static/images/A_大島六宇亜.png",
+      "unit": "31E",
+      "type": "SP回復"
+    },
+    {
+      "id": "S_大島一千子",
+      "name": "S_大島一千子",
+      "effect": "【31E】のアーツを3枚ドロー",
+      "cost": 2,
+      "style": "S",
+      "image": "/static/images/S_大島一千子.png",
+      "unit": "31E",
+      "type": "ドロー"
+    },
+    {
+      "id": "S_大島二似奈",
+      "name": "S_大島二似奈",
+      "effect": "タフネス+30% / このアーツをゲームから除外",
+      "cost": 3,
+      "style": "S",
+      "image": "/static/images/S_大島二似奈.png",
+      "unit": "31E",
+      "type": "タフネス/除外"
+    },
+    {
+      "id": "S_大島三野里",
+      "name": "S_大島三野里",
+      "effect": "「A_大島三野里」をデッキに3枚追加",
+      "cost": 1,
+      "style": "S",
+      "image": "/static/images/S_大島三野里.png",
+      "unit": "31E",
+      "type": "カード追加"
+    },
+    {
+      "id": "S_大島四ツ葉",
+      "name": "S_大島四ツ葉",
+      "effect": "「経験値が200%上昇(1回)」のエンチャントを付与",
+      "cost": 1,
+      "style": "S",
+      "image": "/static/images/S_大島四ツ葉.png",
+      "unit": "31E",
+      "type": "経験値上昇"
+    },
+    {
+      "id": "S_大島五十鈴",
+      "name": "S_大島五十鈴",
+      "effect": "「A_大島五十鈴」をデッキに3枚追加",
+      "cost": 1,
+      "style": "S",
+      "image": "/static/images/S_大島五十鈴.png",
+      "unit": "31E",
+      "type": "カード追加"
+    },
+    {
+      "id": "S_大島六宇亜",
+      "name": "S_大島六宇亜",
+      "effect": "「毎ターンSP+1（後衛）」のエンチャントを付与(3回まで重ねがけ可能)",
+      "cost": 3,
+      "style": "S",
+      "image": "/static/images/S_大島六宇亜.png",
+      "unit": "31E",
+      "type": "SP回復"
+    },
+    {
+      "id": "SS_大島一千子",
+      "name": "SS_大島一千子",
+      "effect": "場の最大数が1増加 / タフネス+10 / このアーツをゲームから除外",
+      "cost": 3,
+      "style": "SS",
+      "image": "/static/images/SS_大島一千子.png",
+      "unit": "31E",
+      "type": "場の拡大/タフネス/除外"
+    },
+    {
+      "id": "SS_大島二似奈",
+      "name": "SS_大島二似奈",
+      "effect": "タフネスをパワーにコピー / このアーツをゲームから除外",
+      "cost": 4,
+      "style": "SS",
+      "image": "/static/images/SS_大島二似奈.png",
+      "unit": "31E",
+      "type": "コピー/除外"
+    },
+    {
+      "id": "SS_大島三野里",
+      "name": "SS_大島三野里",
+      "effect": "「エースエネミーを討伐する度 パワー+5」のエンチャントを付与(15回) / このアーツをゲームから除外",
+      "cost": 3,
+      "style": "SS",
+      "image": "/static/images/SS_大島三野里.png",
+      "unit": "31E",
+      "type": "パワー/除外"
+    },
+    {
+      "id": "SS_大島四ツ葉",
+      "name": "SS_大島四ツ葉",
+      "effect": "「S_一千子,A_二似奈,A_三野里,A_五十鈴,A_六宇亜」をデッキに1枚ずつ追加 / 【31E】のアーツを4枚ドロー",
+      "cost": 3,
+      "style": "SS",
+      "image": "/static/images/SS_大島四ツ葉.png",
+      "unit": "31E",
+      "type": "カード追加/ドロー"
+    },
+    {
+      "id": "SS_大島五十鈴",
+      "name": "SS_大島五十鈴",
+      "effect": "「アーツ効果でカードをデッキに追加するか戻す度 パワー+1 タフネス+1」のエンチャントを付与(30回) / このアーツをゲームから除外",
+      "cost": 3,
+      "style": "SS",
+      "image": "/static/images/SS_大島五十鈴.png",
+      "unit": "31E",
+      "type": "ステータスUP/除外"
+    },
+    {
+      "id": "SS_大島六宇亜",
+      "name": "SS_大島六宇亜",
+      "effect": "「スキル回数+1」のエンチャントを付与(3回まで重ねがけ可能)",
+      "cost": 2,
+      "style": "SS",
+      "image": "/static/images/SS_大島六宇亜.png",
+      "unit": "31E",
+      "type": "スキル回数回復"
+    },
+    {
+      "id": "A_柳美音",
+      "name": "A_柳美音",
+      "effect": "チャージ+1 / 【丸山奏多】のアーツを1枚ドロー",
+      "cost": 1,
+      "style": "A",
+      "image": "/static/images/A_柳美音.png",
+      "unit": "31F",
+      "type": "チャージ蓄積/ドロー"
+    },
+    {
+      "id": "A_丸山奏多",
+      "name": "A_丸山奏多",
+      "effect": "【柳美音】のアーツを1枚ドロー / 【柳美音】のアーツの消費ターンを-1(1回)",
+      "cost": 0,
+      "style": "A",
+      "image": "/static/images/A_丸山奏多.png",
+      "unit": "31F",
+      "type": "ドロー/消費軽減"
+    },
+    {
+      "id": "A_華村詩記",
+      "name": "A_華村詩記",
+      "effect": "チャージ+1 / パワー+30(1回)",
+      "cost": 2,
+      "style": "A",
+      "image": "/static/images/A_華村詩記.png",
+      "unit": "31F",
+      "type": "チャージ蓄積/パワー"
+    },
+    {
+      "id": "A_松岡チロル",
+      "name": "A_松岡チロル",
+      "effect": "タフネス+5 / 初回使用時 さらにタフネス+15",
+      "cost": 1,
+      "style": "A",
+      "image": "/static/images/A_松岡チロル.png",
+      "unit": "31F",
+      "type": "タフネス"
+    },
+    {
+      "id": "A_夏目祈",
+      "name": "A_夏目祈",
+      "effect": "ランダムなノーマルエネミーを1枚討伐 / チャージを1消費して さらにランダムなノーマルエネミーを1枚討伐",
+      "cost": 2,
+      "style": "A",
+      "image": "/static/images/A_夏目祈.png",
+      "unit": "31F",
+      "type": "ノーマル/チャージ消費"
+    },
+    {
+      "id": "A_黒沢真希",
+      "name": "A_黒沢真希",
+      "effect": "エースエネミーを1枚ドロー / チャージを2消費して さらにランダムなエースエネミーを1枚討伐",
+      "cost": 1,
+      "style": "A",
+      "image": "/static/images/A_黒沢真希.png",
+      "unit": "31F",
+      "type": "ドロー/エース/チャージ消費"
+    },
+    {
+      "id": "S_柳美音",
+      "name": "S_柳美音",
+      "effect": "チャージ+1 / 【チャージ消費】のアーツを1枚ドロー",
+      "cost": 1,
+      "style": "S",
+      "image": "/static/images/S_柳美音.png",
+      "unit": "31F",
+      "type": "チャージ蓄積/ドロー"
+    },
+    {
+      "id": "S_丸山奏多",
+      "name": "S_丸山奏多",
+      "effect": "パワー+10 / チャージを1消費して さらにパワー+20",
+      "cost": 2,
+      "style": "S",
+      "image": "/static/images/S_丸山奏多.png",
+      "unit": "31F",
+      "type": "パワー/チャージ消費"
+    },
+    {
+      "id": "S_華村詩記",
+      "name": "S_華村詩記",
+      "effect": "チャージ+1 / 「バトル開始時 スキル攻撃力+50%(3ターン)」のエンチャントを付与(3回)",
+      "cost": 3,
+      "style": "S",
+      "image": "/static/images/S_華村詩記.png",
+      "unit": "31F",
+      "type": "チャージ蓄積/バフ"
+    },
+    {
+      "id": "S_松岡チロル",
+      "name": "S_松岡チロル",
+      "effect": "チャージ+1 / 初回使用時 タフネス+30",
+      "cost": 1,
+      "style": "S",
+      "image": "/static/images/S_松岡チロル.png",
+      "unit": "31F",
+      "type": "チャージ蓄積/タフネス"
+    },
+    {
+      "id": "S_夏目祈",
+      "name": "S_夏目祈",
+      "effect": "「エネミーを討伐する度 パワー+2」のエンチャントを付与(35回) / このアーツをゲームから除外",
+      "cost": 3,
+      "style": "S",
+      "image": "/static/images/S_夏目祈.png",
+      "unit": "31F",
+      "type": "パワー/除外"
+    },
+    {
+      "id": "S_黒沢真希",
+      "name": "S_黒沢真希",
+      "effect": "「エースエネミーを討伐する度 チャージ+1」のエンチャントを付与(10回) / このアーツをゲームから除外",
+      "cost": 1,
+      "style": "S",
+      "image": "/static/images/S_黒沢真希.png",
+      "unit": "31F",
+      "type": "チャージ蓄積/除外"
+    },
+    {
+      "id": "SS_柳美音",
+      "name": "SS_柳美音",
+      "effect": "「チャージする度 チャージが4以上なら1消費して【31F】のアーツを1枚ドロー」のエンチャントを付与(重ねがけ不可) / このアーツをゲームから除外",
+      "cost": 4,
+      "style": "SS",
+      "image": "/static/images/SS_柳美音.png",
+      "unit": "31F",
+      "type": "ドロー/除外"
+    },
+    {
+      "id": "SS_丸山奏多",
+      "name": "SS_丸山奏多",
+      "effect": "1枚バースト(左から順にアーツを消費ターン0で発動し、エネミーを討伐) / チャージを3消費して さらに2枚バースト",
+      "cost": 1,
+      "style": "SS",
+      "image": "/static/images/SS_丸山奏多.png",
+      "unit": "31F",
+      "type": "バースト/チャージ消費"
+    },
+    {
+      "id": "SS_華村詩記",
+      "name": "SS_華村詩記",
+      "effect": "場にあるアーツを全て捨て札に置き 捨て札に置いたアーツ1枚につき チャージ+1 ボス登場までのターンを2ターン延長 / このアーツをゲームから除外",
+      "cost": 2,
+      "style": "SS",
+      "image": "/static/images/SS_華村詩記.png",
+      "unit": "31F",
+      "type": "チャージ蓄積/延長/除外"
+    },
+    {
+      "id": "SS_松岡チロル",
+      "name": "SS_松岡チロル",
+      "effect": "ランダムなノーマルエネミーを3枚討伐 / 初回発動時 消費ターン4ターン軽減",
+      "cost": 4,
+      "style": "SS",
+      "image": "/static/images/SS_松岡チロル.png",
+      "unit": "31F",
+      "type": "ノーマル/消費軽減"
+    },
+    {
+      "id": "SS_夏目祈",
+      "name": "SS_夏目祈",
+      "effect": "ランダムなエネミーを1枚討伐 / チャージを1消費して さらにランダムなエネミーを1枚討伐（これをチャージかエネミーがなくなるまで繰り返す）",
+      "cost": 3,
+      "style": "SS",
+      "image": "/static/images/SS_夏目祈.png",
+      "unit": "31F",
+      "type": "討伐（全対象）/チャージ消費"
+    },
+    {
+      "id": "SS_黒沢真希",
+      "name": "SS_黒沢真希",
+      "effect": "パワー+10 / チャージを1消費して さらにパワー+10（これをチャージがなくなるまで繰り返す）",
+      "cost": 3,
+      "style": "SS",
+      "image": "/static/images/SS_黒沢真希.png",
+      "unit": "31F",
+      "type": "パワー/チャージ消費"
     }
+
+
+
   ]
   

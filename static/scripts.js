@@ -170,12 +170,21 @@ function addCard(cardId) {
 }
 // デッキを画像としてダウンロード
 document.getElementById("download-deck-button").addEventListener("click", () => {
-  html2canvas(document.getElementById("deck-content")).then((canvas) => {
-    const link = document.createElement("a");
-    link.download = `${"deck"}.png`;
-    link.href = canvas.toDataURL();
-    link.click();
-  });
+  const defaultFileName = "deck"; // デフォルトのファイル名
+  const fileName = prompt("保存するファイル名を入力してください:", defaultFileName);
+  
+  if (fileName) { // 入力があれば処理を続行
+    html2canvas(document.getElementById("deck-content")).then((canvas) => {
+      const link = document.createElement("a");
+      link.download = `${fileName}.png`; // 入力された名前を使用
+      link.href = canvas.toDataURL();
+      link.click();
+    }).catch((error) => {
+      console.error("画像のダウンロードに失敗しました:", error);
+    });
+  } else {
+    alert("ファイル名が入力されなかったため、ダウンロードをキャンセルしました。");
+  }
 });
 
 // 画像としてデッキをキャプチャ

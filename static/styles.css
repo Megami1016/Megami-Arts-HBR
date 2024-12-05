@@ -64,12 +64,10 @@ li:hover {
     
   /* 画像部分 */
   .card-image {
-    width: 115px;  /* 画像の幅を固定 */
-    height: 155px;  /* 高さも固定 */
-    border: 1px solid #888;
-
-    margin: 0 5px 0 5px;
-    padding: 0 5px 0 5px;
+    width: 117px;  /* 画像の幅を固定 */
+    height: 157px;  /* 高さも固定 */
+    margin: 0 3px 0 3px;
+    padding: 0 3px 0 3px;
     object-fit: cover;  /* 画像が枠にフィットするようにする */
     margin-bottom: 15px;  /* 画像と詳細の間にスペース */
   }

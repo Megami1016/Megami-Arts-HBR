@@ -39,6 +39,11 @@ function displayCards(cards) {
       event.dataTransfer.setData("text", event.target.id); // ドラッグされたカードのIDを保存
     });
 
+    cardItem.addEventListener("click", () => {
+      console.log(card.id);
+      addCard(card.id);
+    });
+
     // カードの名前と効果
     const cardDetails = document.createElement("div");
     cardDetails.className = "card-details";
@@ -127,16 +132,27 @@ document.getElementById("search-form").addEventListener("submit", (event) => {
 //   displayCards(cardData);
 // });
 
-// ドラッグ＆ドロップ関連の設定
-function allowDrop(event) {
-  event.preventDefault();
+
+
+const cards = document.getElementsByClassName("card-container");
+for (let i = 0; i < cards.length; i++) {
+  cards[i].addEventListener("click", () => {
+    const cardId = cards[i].getAttribute("data-id");
+    addCard(cardId);
+  });
 }
 
-function drop(event) {
-  event.preventDefault();
-  const cardId = event.dataTransfer.getData("text");
-  addCard(cardId);
-}
+
+// // ドラッグ＆ドロップ関連の設定
+// function allowDrop(event) {
+//   event.preventDefault();
+// }
+
+// function drop(event) {
+//   event.preventDefault();
+//   const cardId = event.dataTransfer.getData("text");
+//   addCard(cardId);
+// }
 
 // デッキにカードを追加する関数
 let addedCards = new Set(); // 追加されたカードを追跡

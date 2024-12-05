@@ -132,11 +132,11 @@ li:hover {
     flex-wrap: wrap;
     gap: 10px;
     justify-content: flex-start;
+    align-content: flex-start;    /* 複数行の内容を上詰めに配置 */
   }
   
   #deck-content .card-container {
     margin: 1px;  /* 各カード同士の間隔 */
-    /* 必要に応じて調整可能 */
 }
   
   #deck-content p {

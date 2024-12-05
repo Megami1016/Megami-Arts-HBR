@@ -69,7 +69,7 @@ li:hover {
     margin: 0 3px 0 3px;
     padding: 0 3px 0 3px;
     object-fit: cover;  /* 画像が枠にフィットするようにする */
-    margin-bottom: 15px;  /* 画像と詳細の間にスペース */
+    /* margin-bottom: 15px;  画像と詳細の間にスペース */
   }
 
   /* カードの詳細部分 */

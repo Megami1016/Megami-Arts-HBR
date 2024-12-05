@@ -127,6 +127,28 @@ document.getElementById("search-form").addEventListener("submit", (event) => {
 //   displayCards(cardData);
 // });
 
+// document.getElementsByClassName("card-item").addEventListener("click", () => {
+//   const cardId = event.dataTransfer.getData("text");
+//   addCard(cardId);
+// });
+// 複数要素にクリックイベントを追加
+// const cards = document.getElementsByClassName("card-container");
+// Array.from(cards).forEach((card) => {
+//   card.addEventListener("click", () => {
+//     const cardId = card.getAttribute("data-id"); // カードのIDを取得
+//     addCard(cardId); // カードを配置
+//   });
+// });
+
+const cards = document.getElementsByClassName("card-container");
+for (let i = 0; i < cards.length; i++) {
+  cards[i].addEventListener("click", () => {
+    const cardId = cards[i].getAttribute("data-id");
+    addCard(cardId);
+  });
+}
+
+
 // ドラッグ＆ドロップ関連の設定
 function allowDrop(event) {
   event.preventDefault();

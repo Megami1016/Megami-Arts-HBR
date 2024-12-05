@@ -89,6 +89,7 @@ document.getElementById("search-button").addEventListener("click", () => {
   const style = document.getElementById("style").value.toLowerCase();
   const unit = document.getElementById("unit").value.toLowerCase();
   const type = document.getElementById("type").value.toLowerCase();
+  const season = document.getElementById("season").value.toLowerCase();
   const showFavorites = document.getElementById("show-favorites").checked;
 
   const favoriteCards = JSON.parse(localStorage.getItem("favoriteCards")) || {};
@@ -100,6 +101,7 @@ document.getElementById("search-button").addEventListener("click", () => {
       (!style || card.style.toLowerCase() === style) &&
       (!unit || card.unit.toLowerCase() === unit) &&
       (!type || card.type.toLowerCase().includes(type)) &&
+      (!season || card.season.toLowerCase().includes(season))&&
       matchesFavorites
     );
   });

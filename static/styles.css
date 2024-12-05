@@ -123,7 +123,7 @@ li:hover {
 
   /* デッキエリア */
   #deck-content {
-    width: 80%;
+    width: 100%;
     max-height: 100%;
     border: 2px dashed #8f030360;
     padding: 0px;
@@ -131,6 +131,7 @@ li:hover {
     margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
+    gap: 5px;
     justify-content: flex-start;
     align-content: flex-start;    /* 複数行の内容を上詰めに配置 */
   }

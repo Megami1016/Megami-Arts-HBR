@@ -126,12 +126,11 @@ li:hover {
     width: 100%;
     max-height: 100%;
     border: 2px dashed #8f030360;
-    padding: 10px;
+    padding: 5px;
     background-color: #f9f9f9;
     margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
     justify-content: flex-start;
     align-content: flex-start;    /* 複数行の内容を上詰めに配置 */
   }

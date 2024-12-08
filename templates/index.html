@@ -92,6 +92,7 @@
         </form>
       </div>
       <div class="card-pool-container">
+        <!-- <button id="on-off-button">カード説明 ON/OFF</button> -->
         <div id="card-pool-content" class="card-pool">
           <!-- カード一覧が生成される -->
         </div>
@@ -101,7 +102,10 @@
     <!-- 右側: デッキ編集エリア -->
     <div class="right-panel">
       <h2>デッキ編集</h2>
-      <div id="deck-content" class="deck-content" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <div id="deck-info">
+        <p>現在配置されているカード数: <span id="card-count">0</span> 枚</p>
+      </div>
+      <div id="deck-content" class="deck-content">
         <!-- ドロップエリア -->
       </div>
     </div>

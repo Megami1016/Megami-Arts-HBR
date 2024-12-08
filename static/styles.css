@@ -74,7 +74,8 @@ li:hover {
 
   /* カードの詳細部分 */
   .card-details {
-    display: flex;
+    display: none; /* 初期状態は非表示 */
+    /* display: flex; */
     flex-direction: column;  /* 説明文と名前を縦に並べる */
     text-align: center;
     margin: 0 0 0 10px;
@@ -204,17 +205,6 @@ li:hover {
   #search-form button {
       justify-self: stretch; /* ボタンを幅いっぱいに */
   }
-}
-
-.deck-edit {
-  display: flex;
-  align-items: center; /* 要素を縦方向で中央揃え */
-  justify-content: flex-start; /* 要素を左に寄せる */
-  gap: 10px; /* 文字と入力ボックス、ボタンの間にスペースを追加 */
-}
-
-.deck-edit-label {
-  margin-top: 0;
 }
 
 .favorite-toggle {
@@ -387,6 +377,8 @@ li:hover {
   overflow-y: auto;
 }
 
+
+
 #long-press-target {
   padding: 20px;
   border: 1px solid black;
@@ -418,6 +410,51 @@ li:hover {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 1000;
+  width: 585px;
+  height: 70px;
+  font-size: 20px;
   text-align: center;
   min-width: 200px;
 }
+
+.close-button {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  color: red;
+}
+
+#on-off-button {
+  background-color: #4CAF50; /* 緑色 */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#on-off-button:hover {
+  background-color: #45a049;
+}
+
+/* デッキに追加されたカードのスタイル */
+.added-card {
+  width: calc(100% / 6 - 10px); /* 6枚横並びで配置 */
+  height: 150px;
+  /* background-color: #e0e0e0; */
+  /* border: 2px solid #aaa; */
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  margin-bottom: 10px;
+  position: relative;
+}
+

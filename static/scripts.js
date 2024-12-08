@@ -53,6 +53,65 @@ function displayCards(cards) {
 
     const cardEffect = document.createElement("p");
     cardEffect.textContent = card.effect;
+    //cardEffect.id = "card-effect";
+
+    //const cardEffect_p = document.getElementById("card-effect");
+
+    let pressTimer = null; // タイマーIDを保持する変数
+    const longPressDuration = 500; // 長押し判定の時間（ミリ秒）
+
+    // 動的に要素を作成
+    const overlayElement = document.createElement("div");
+    overlayElement.className = "overlay";
+
+    const outputElement = document.createElement("div");
+    outputElement.className = "popup";
+    outputElement.textContent = card.effect;//説明内容を格納
+
+    const cardPoolContainer = document.querySelector(".card-pool-container");
+    cardPoolContainer.appendChild(overlayElement);
+    cardPoolContainer.appendChild(outputElement);
+
+    // 長押しの開始
+    cardEffect.addEventListener("touchstart", () => {
+      pressTimer = setTimeout(() => {
+          // 長押し成功時の処理
+          console.log("長押し成功");
+          outputElement.style.display = "block"; // ポップアップ表示
+          overlayElement.style.display = "block"; // オーバーレイ表示
+      }, longPressDuration);
+    });
+
+    // タップやスワイプを検出してキャンセル
+    cardEffect.addEventListener("touchend", () => {
+      clearTimeout(pressTimer); // タイマーをクリア
+    });
+
+    cardEffect.addEventListener("touchmove", () => {
+      clearTimeout(pressTimer); // スワイプ中もキャンセル
+    });
+
+    // デスクトップ対応（マウスでも長押し可能に）
+    cardEffect.addEventListener("mousedown", () => {
+      pressTimer = setTimeout(() => {
+          outputElement.style.display = "block"; // ポップアップ表示
+          overlayElement.style.display = "block"; // オーバーレイ表示
+      }, longPressDuration);
+    });
+
+    cardEffect.addEventListener("mouseup", () => {
+      clearTimeout(pressTimer);
+    });
+
+    cardEffect.addEventListener("mousemove", () => {
+      clearTimeout(pressTimer);
+    });
+
+    // オーバーレイをクリックして非表示にする
+    overlayElement.addEventListener("click", () => {
+      outputElement.style.display = "none"; // 非表示
+      overlayElement.style.display = "none"; // 非表示
+    });
 
     // 星形のチェックボックス
     const favoriteToggle = document.createElement("span");
@@ -133,7 +192,7 @@ document.getElementById("search-form").addEventListener("submit", (event) => {
 // });
 
 
-
+//カードをクリックで配置できるように仕様変更
 const cards = document.getElementsByClassName("card-container");
 for (let i = 0; i < cards.length; i++) {
   cards[i].addEventListener("click", () => {
@@ -141,7 +200,6 @@ for (let i = 0; i < cards.length; i++) {
     addCard(cardId);
   });
 }
-
 
 // // ドラッグ＆ドロップ関連の設定
 // function allowDrop(event) {

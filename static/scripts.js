@@ -32,35 +32,9 @@ function displayCards(cards) {
     imgElement.src = `/static/images/${card.id}.png`; // 画像パス
     imgElement.alt = card.name;
     imgElement.classList.add("card-image");
-    //imgElement.setAttribute("draggable", "true");
     //img要素に情報を紐づけする
     imgElement.setAttribute("id", card.id);
     imgElement.setAttribute("unit", card.unit);
-
-    // imgElement.addEventListener("dragstart", function (event) {
-    //   event.dataTransfer.setData("text", event.target.id); // ドラッグされたカードのIDを保存
-    // });
-
-    const imgElements = document.getElementsByClassName("card-image");
-    for (let imgElement of imgElements) {
-      imgElement.addEventListener("click", function(event) {
-        const clickedImage = event.target; // クリックされた imgElement を取得
-    
-        // クリックされた imgElement のIDやその他の情報を取得
-        const cardId = clickedImage.id;
-        const cardUnit = clickedImage.getAttribute("unit");
-        //const clickedImage = event.target.id; // クリックされた要素
-    
-        // クリックされた画像要素に基づいて処理を実行
-        console.log(cardId, cardUnit);
-        addCard(cardId, cardUnit);
-      });
-    }//img要素クリックでデッキ追加（idをまとめて格納しているためカード内蔵量分実行されてしまっている。アラート機能削除でごまかし)
-
-    // cardItem.addEventListener("click", () => {
-    //   console.log(imgElements);
-    //   addCard(card.id);
-    // });div要素クリックでデッキ追加
 
     // カードの名前と効果
     const cardDetails = document.createElement("div");
@@ -71,21 +45,15 @@ function displayCards(cards) {
 
     const cardEffect = document.createElement("p");
     cardEffect.textContent = card.effect;
-    //cardEffect.id = "card-effect";
-
-    //const cardEffect_p = document.getElementById("card-effect");
-
     
     const cardPoolContainer = document.querySelector(".card-pool-container");
-    // ボタンを動的に作成
+    const searchContainer = document.querySelector(".search-container");
     
     if (!document.getElementById("on-off-button")) {
       const button = document.createElement("button");
       button.id = "on-off-button";
       button.textContent = "カード説明 ON/OFF ※説明文長押しで詳細表示";
-
-      // .card-pool-container の子要素としてボタンを追加
-      cardPoolContainer.appendChild(button);
+      searchContainer.appendChild(button);
       
       // ボタンのクリックイベント
       button.addEventListener("click", () => {
@@ -112,32 +80,28 @@ function displayCards(cards) {
     let pressTimer = null; // タイマーIDを保持する変数
     const longPressDuration = 300; // 長押し判定の時間（ミリ秒）
 
-    // 動的に要素を作成
     const overlayElement = document.createElement("div");
     overlayElement.className = "overlay";
 
     const outputElement = document.createElement("div");
     outputElement.className = "popup";
-    outputElement.textContent = card.effect;//説明内容を格納
+    outputElement.textContent = card.effect;
 
     // 閉じるボタンを追加
     const closeButton = document.createElement("button");
     closeButton.className = "close-button";
-    closeButton.textContent = "閉じる"; // ボタンのテキスト
+    closeButton.textContent = "閉じる"; 
 
     // ポップアップに閉じるボタンを追加
     outputElement.appendChild(closeButton);
 
     // カードプールコンテナにオーバーレイとポップアップを追加
-    //const cardPoolContainer = document.querySelector(".card-pool-container");
     cardPoolContainer.appendChild(overlayElement);
     cardPoolContainer.appendChild(outputElement);
 
     // 長押しの開始
     cardEffect.addEventListener("touchstart", () => {
       pressTimer = setTimeout(() => {
-          // 長押し成功時の処理
-          console.log("長押し成功");
           outputElement.style.display = "block"; // ポップアップ表示
           overlayElement.style.display = "block"; // オーバーレイ表示
       }, longPressDuration);
@@ -205,6 +169,19 @@ function displayCards(cards) {
     // カードプールに追加
     cardPoolContent.appendChild(cardItem);
   });
+  const imgElements = document.getElementsByClassName("card-image");
+  for (let imgElement of imgElements) {//img要素クリックでデッキ追加（idをまとめて格納しているためカード内蔵量分実行されてしまっている。アラート機能削除でごまかし)
+    imgElement.addEventListener("click", function(event) {
+      const clickedImage = event.target; // クリックされた imgElement を取得
+  
+      // クリックされた imgElement のIDやその他の情報を取得
+      const cardId = clickedImage.id;
+      const cardUnit = clickedImage.getAttribute("unit");
+    
+      // クリックされた画像要素に基づいて処理を実行
+      addCard(cardId, cardUnit);
+    });
+  }
 }
 
 // 検索フォームのボタンクリック時の処理
@@ -239,43 +216,8 @@ document.getElementById("search-form").addEventListener("submit", (event) => {
   document.getElementById("search-button").click(); // 検索ボタンをクリック
 });
 
-// // 絞り込み条件を初期化する処理
-// document.getElementById("reset-filters-button").addEventListener("click", () => {
-//   // フィルタ入力欄を初期化
-//   document.getElementById("cost").value = "";
-//   document.getElementById("style").value = "";
-//   document.getElementById("unit").value = "";
-//   document.getElementById("type").value = "";
-//   document.getElementById("show-favorites").checked = false;
-
-//   // 全てのカードを再表示
-//   displayCards(cardData);
-// });
-
-
-//カードをクリックで配置できるように仕様変更
-const cards = document.getElementsByClassName("card-container");
-for (let i = 0; i < cards.length; i++) {
-  cards[i].addEventListener("click", () => {
-    const cardId = cards[i].getAttribute("data-id");
-    addCard(cardId);
-  });
-}
-
-// // ドラッグ＆ドロップ関連の設定
-// function allowDrop(event) {
-//   event.preventDefault();
-// }
-
-// function drop(event) {
-//   event.preventDefault();
-//   const cardId = event.dataTransfer.getData("text");
-//   addCard(cardId);
-// }
-
 // デッキにカードを追加する関数
 let addedCards = new Set(); // 追加されたカードを追跡
-
 function addCard(cardId) {
   if (addedCards.has(cardId)) {
     //alert("このカードはすでにデッキに追加されています。");
@@ -286,13 +228,10 @@ function addCard(cardId) {
   const card = cardData.find(c => c.id === cardId); // cardIdと一致するカードを検索
 
   const cardImage = document.getElementById(cardId).src;
-  //const cardUnit = document.getElementById(cardId).unit;
   const deckContent = document.getElementById("deck-content");
   const cardContainer = document.createElement("div");
   cardContainer.classList.add("card-container", "added-card");
-  //cardContainer.setAttribute("data-unit", cardUnit); // unit情報をデータ属性として追加
-  console.log("カード情報:", card);
-  console.log("unit:", card.unit); // unit が正しく存在するか確認
+  //console.log("カード情報:", card);
 
   const imgElement = document.createElement("img");
   imgElement.src = cardImage;
@@ -341,6 +280,7 @@ function createSortButton() {
 
   // ソートボタンの作成
   const sortButton = document.createElement("button");
+  sortButton.id = "sortButton";
   sortButton.textContent = "部隊順にソート";
 
   // ソートボタンのクリックイベント

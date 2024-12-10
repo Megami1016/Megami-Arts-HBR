@@ -7,6 +7,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     height: 100vh;
+    overflow: hidden;
   }
   
   .sidebar, .main { /*, .card-pool */
@@ -56,8 +57,7 @@ li:hover {
     flex-direction: column;
     align-items: center;
     border: 1px solid #888;
-    padding: 5px;
-    border-radius: 4px;
+    border-radius: 10px;
     background-color: #fff;
     cursor: pointer;
   }
@@ -66,10 +66,10 @@ li:hover {
   .card-image {
     width: 117px;  /* 画像の幅を固定 */
     height: 157px;  /* 高さも固定 */
-    margin: 0 3px 0 3px;
+    margin: 3px 3px 0 3px;
     padding: 0 3px 0 3px;
     object-fit: cover;  /* 画像が枠にフィットするようにする */
-    /* margin-bottom: 15px;  画像と詳細の間にスペース */
+    overflow: hidden;
   }
 
   /* カードの詳細部分 */
@@ -167,7 +167,6 @@ li:hover {
     display: grid; /* グリッドレイアウトを使用 */
     grid-template-columns: repeat(2, auto); /* 2列に分割 */
     gap: 10px; /* 各要素の間隔 */
-    margin-bottom: 20px; /* 下部の余白 */
 }
 
 #search-form label {
@@ -268,7 +267,7 @@ li:hover {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-bottom: 10px;
+  margin: -5px;
 }
 
 .deck-controls button {
@@ -292,16 +291,7 @@ li:hover {
 
 /* 検索欄のスタイル */
 .search-container {
-  margin-bottom: 10px;
-}
-
-/* カードプール全体のスタイル */
-.card-pool-container {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  width: 100%; /* 必要に応じて調整 */
-  max-height: 100%; /* 最大高さを指定（必要に応じて調整） */
+  margin-bottom: -10px;
 }
 
 .card-pool {
@@ -349,10 +339,14 @@ li:hover {
 }
 
 .card-pool-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%; 
+  max-height: 100%; 
   flex-grow: 1;
   overflow-y: auto; /* カードプール部分をスクロール可能に */
   border: 1px solid #ccc;
-  padding: 10px;
   background-color: #fff;
 }
 
@@ -370,6 +364,7 @@ li:hover {
 }
 
 .deck-content {
+  height: 300px;
   flex-grow: 1;
   border: 2px dashed #ccc;
   padding: 10px;
@@ -449,8 +444,6 @@ li:hover {
 .added-card {
   width: calc(100% / 6 - 10px); /* 6枚横並びで配置 */
   height: 150px;
-  /* background-color: #e0e0e0; */
-  /* border: 2px solid #aaa; */
   padding: 10px;
   box-sizing: border-box;
   text-align: center;
@@ -458,3 +451,19 @@ li:hover {
   position: relative;
 }
 
+#deck-info{
+  display: flex;
+  gap: 10px;
+}
+
+#sortButton{
+  padding: 5px 10px; /* ボタンの上下・左右の余白を減らす */
+  font-size: 14px; /* フォントサイズを小さめに */
+  line-height: 1.2; /* 高さを抑える */
+  border: 1px solid #ccc; /* 薄めのボーダー */
+  border-radius: 4px; /* 少し角を丸める */
+  background-color: #f5f5f5; /* 薄い背景色 */
+  color: #333; /* 文字色 */
+  cursor: pointer;
+  transition: all 0.2s ease-in-out; /* ホバー時のスムーズな変化 */
+}

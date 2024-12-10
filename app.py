@@ -4,8 +4,6 @@ from werkzeug.utils import secure_filename, os
 
 
 app = Flask(__name__)
-# redis_host = os.environ.get("redis_host","redis://localhost")
-# r = redis.from_url(redis_host)
 
 # データファイルを提供するエンドポイント
 @app.route('/data/cards.json')

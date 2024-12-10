@@ -339,7 +339,7 @@ document.addEventListener("DOMContentLoaded", initialize);
 
 // デッキを画像としてダウンロード
 document.getElementById("download-deck-button").addEventListener("click", () => {
-  const defaultFileName = "deck"; // デフォルトのファイル名
+  const defaultFileName = "デッキ名を入力してください"; // デフォルトのファイル名
   const fileName = prompt("保存するファイル名を入力してください:", defaultFileName);
   
   if (fileName) { // 入力があれば処理を続行
@@ -355,13 +355,3 @@ document.getElementById("download-deck-button").addEventListener("click", () => 
     alert("ファイル名が入力されなかったため、ダウンロードをキャンセルしました。");
   }
 });
-
-// 画像としてデッキをキャプチャ
-function captureDeckImage() {
-  return new Promise((resolve, reject) => {
-    html2canvas(document.getElementById("deck-content")).then((canvas) => {
-      const imageUrl = canvas.toDataURL();
-      resolve(imageUrl);
-    }).catch(reject);
-  });
-}

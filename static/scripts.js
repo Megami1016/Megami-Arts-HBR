@@ -52,7 +52,7 @@ function displayCards(cards) {
     if (!document.getElementById("on-off-button")) {
       const button = document.createElement("button");
       button.id = "on-off-button";
-      button.textContent = "カード説明 ON/OFF ※説明文長押しで詳細表示";
+      button.textContent = "カード説明 ON/OFF";
       searchContainer.appendChild(button);
       
       // ボタンのクリックイベント
@@ -268,8 +268,6 @@ function updateCardCount() {
   const cardCount = cardItems.length;
   const cardCountDisplay = document.getElementById("card-count");
   cardCountDisplay.textContent = cardCount; // カウント数を更新
-
-  console.log(`現在配置されているカードの枚数: ${cardCount}`);
 }
 
 // ソートボタンの作成とイベントリスナーの追加
@@ -336,22 +334,86 @@ function initialize() {
 // ページロード時に初期化
 document.addEventListener("DOMContentLoaded", initialize);
 
+// 配置されたカードの枚数を取得する関数（UI更新は別で実行）
+function getCardCount() {
+  const deckContent = document.getElementById("deck-content");
+  const cardItems = deckContent.getElementsByClassName("added-card");
+  return cardItems.length;
+}
 
 // デッキを画像としてダウンロード
 document.getElementById("download-deck-button").addEventListener("click", () => {
   const defaultFileName = "デッキ名を入力してください"; // デフォルトのファイル名
   const fileName = prompt("保存するファイル名を入力してください:", defaultFileName);
-  
-  if (fileName) { // 入力があれば処理を続行
-    html2canvas(document.getElementById("deck-content")).then((canvas) => {
+
+  if (!fileName) {
+    alert("ファイル名が入力されなかったため、ダウンロードをキャンセルしました。");
+    return;
+  }
+
+  const captureElement = document.querySelector("#deck-content"); // キャプチャ対象の要素
+  const cardCount = getCardCount(); // カードの枚数を取得
+
+  // オリジナルのスタイルを保存
+  const originalStyle = {
+    height: captureElement.style.height,
+    maxHeight: captureElement.style.maxHeight,
+    overflowY: captureElement.style.overflowY,
+    gap: captureElement.style.gap,
+  };
+
+  let captureHeight;
+
+  // カード枚数に応じて高さを決定
+  switch (true) {
+    case cardCount <= 18:
+      captureHeight = "600px";
+      break;
+    case 19 <= cardCount && cardCount <= 24:
+      captureHeight = "700px";
+      break;
+    case 25 <= cardCount && cardCount <= 30:
+      captureHeight = "850px";
+      break;
+    case 31 <= cardCount && cardCount <= 36:
+      captureHeight = "1000px";
+      break;
+    case 37 <= cardCount && cardCount <= 42:
+      captureHeight = "1150px";
+      break;
+    case 43 <= cardCount && cardCount <= 48:
+      captureHeight = "1350px";
+      break;
+    case 49 <= cardCount && cardCount <= 54:
+      captureHeight = "1500px";
+      break;
+    default:
+      captureHeight = "1650px";
+      break;
+  }
+
+  // キャプチャ用スタイルの適用
+  captureElement.style.height = captureHeight; // 高さを動的に設定
+  captureElement.style.maxHeight = "none"; // 最大高さを解除
+  captureElement.style.overflowY = "visible"; // スクロールバーを非表示
+  captureElement.style.gap = "5px"; // gapを固定値に設定
+
+  // キャプチャ処理
+  html2canvas(captureElement)
+    .then((canvas) => {
       const link = document.createElement("a");
-      link.download = `${fileName}.png`; // 入力された名前を使用
+      link.download = `${fileName}.png`;
       link.href = canvas.toDataURL();
       link.click();
-    }).catch((error) => {
+      console.log(captureHeight);
+
+      // 元のスタイルを復元
+      Object.assign(captureElement.style, originalStyle);
+    })
+    .catch((error) => {
       console.error("画像のダウンロードに失敗しました:", error);
+
+      // エラー時にも元のスタイルを復元
+      Object.assign(captureElement.style, originalStyle);
     });
-  } else {
-    alert("ファイル名が入力されなかったため、ダウンロードをキャンセルしました。");
-  }
 });

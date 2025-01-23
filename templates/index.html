@@ -3,9 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>デッキシミュレーター_HBR_ArtsBattle</title>
-  <link rel="stylesheet" href="/static/styles.css">
+  <title>HBRデッキシミュレーター</title>
+  <link rel="stylesheet" href="/static/css/PC.css" id="css-switcher">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script>
+    // CSS切り替え関数
+    function switchCSS() {
+      const cssSwitcher = document.getElementById("css-switcher");
+      const width = window.innerWidth;
+  
+      if (width <= 410) {
+        cssSwitcher.href = "/static/css/mobile1.css";
+        console.log(`画面幅: ${width} - mobile1.css 適用`);
+      } else if (width >= 411 && width <= 819) {
+        cssSwitcher.href = "/static/css/mobile2.css";
+        console.log(`画面幅: ${width} - mobile2.css 適用`);
+      } else if (width >= 820 && width <= 1024) {
+        cssSwitcher.href = "/static/css/pad.css";
+        console.log(`画面幅: ${width} - pad.css 適用`);
+      } else {
+        cssSwitcher.href = "/static/css/PC.css";
+        console.log(`画面幅: ${width} - PC.css 適用`);
+      }
+    }
+  
+    // 初期化時とリサイズ時に適用
+    document.addEventListener("DOMContentLoaded", () => {
+      setTimeout(() => {
+        switchCSS();
+        console.log("初期画面幅:", window.innerWidth);
+      }, 100);
+    });
+  
+    window.addEventListener("resize", () => {
+      switchCSS();
+      console.log("リサイズ後の画面幅:", window.innerWidth);
+    });
+  </script>
+  
 </head>
 <body>
   <div class="container">
@@ -71,7 +106,7 @@
               <option value="チャージ蓄積">チャージ蓄積</option>
               <option value="チャージ消費">チャージ消費</option>
           </select>
-          <label type="season">シーズン絞り込み</label>
+          <label type="season">シーズン別</label>
             <select id="season" id="name">
               <option value="">指定なし</option>
               <option value="1">シーズン1</option>
@@ -89,7 +124,6 @@
         </form>
       </div>
       <div class="card-pool-container">
-        <!-- <button id="on-off-button">カード説明 ON/OFF</button> -->
         <div id="card-pool-content" class="card-pool">
           <!-- カード一覧が生成される -->
         </div>

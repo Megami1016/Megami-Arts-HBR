@@ -3,7 +3,7 @@ from flask import Flask, render_template, request, jsonify, send_from_directory
 from werkzeug.utils import secure_filename, os
 
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder="static")
 
 # データファイルを提供するエンドポイント
 @app.route('/data/cards.json')

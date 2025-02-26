@@ -1,0 +1,597 @@
+/* 📌 共通スタイル */
+共通
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+.container {
+  display: grid;
+  height: 100vh;
+}
+
+.left-panel { 
+    display: flex;
+    flex-direction: column; /*子要素を縦に並べる*/
+    gap: 10px;
+    background-color: #f4f4f4;
+  }
+.deck-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+.deck-controls button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px; /*丸角*/
+    cursor: pointer;
+  }
+
+.deck-controls button:hover {/*マウスホバー状態で色を濃くするUI*/
+    background-color: #0056b3;
+  }
+
+#search-form {
+  display: grid; /* グリッドレイアウトを使用 */
+  overflow-x: auto;
+}
+#search-form input, #search-form select {
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+#search-form button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+#search-form button:hover {
+    background-color: #0056b3;
+  }
+#search-form input[type="checkbox"] {
+    width: auto; /* 幅は自動調整 */
+  }
+  .card-pool-container{
+    overflow-y:scroll; /* 縦スクロールを有効にする */
+  }
+.card-pool {
+    display: grid;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+  }
+.card-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #888;
+    border-radius: 10px;
+    background-color: #fff;
+    cursor: pointer;
+  }
+  .card-image {
+    object-fit: cover;  /* 画像が枠にフィットするようにする */
+    overflow: hidden;
+  }
+.card-details {
+    display: none; /* 初期状態は非表示 */
+    flex-direction: column;  /* 説明文と名前を縦に並べる */
+    overflow: hidden;  /* 長いテキストをはみ出させない */
+    text-align: left;  /* 左寄せに設定 */
+  }
+.card-details h3 {
+  font-weight: bold;
+  text-overflow: ellipsis;  /* 名前が長すぎる場合、省略表示 */
+  white-space: nowrap;  /* 改行させず一行で表示 */
+  overflow: hidden;  /* はみ出す部分を非表示 */
+}
+.card-details p {
+    color: #555;
+    line-height: 1.4;
+    overflow: hidden;  /* 長すぎるテキストは非表示 */
+    text-overflow: ellipsis;  /* 長いテキストは省略表示 */
+    display: -webkit-box;
+    -webkit-line-clamp: 4;  /* 行数制限 (3行以内に収める) */
+    -webkit-box-orient: vertical;
+  }
+.favorite-toggle {
+    user-select: none;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* 星に軽い影をつけて浮き上がらせる */
+  }
+#on-off-button {
+    background-color: #4CAF50; /* 緑色 */
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+#on-off-button:hover {
+    background-color: #45a049;
+  }
+.popup {
+    display: none; /* 初期状態は非表示 */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    text-align: center;
+    min-width: 200px;
+  }
+.overlay {
+    display: none; /* 初期状態は非表示 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+.close-button {
+    position: absolute;
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+ .close-button:hover {
+    color: red;
+  }
+
+.right-panel {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: #fff;
+  }
+.right-panel h2 {
+    text-align: center;
+  }
+#deck-info{
+    display: flex;
+    justify-content: space-between; /* 子要素を左右に配置 */
+  }
+#sortButton{
+    line-height: 1.2; /* 高さを抑える */
+    border: 1px solid #ccc; /* 薄めのボーダー */
+    border-radius: 4px; /* 少し角を丸める */
+    background-color: #f5f5f5; /* 薄い背景色 */
+    color: #333; /* 文字色 */
+    cursor: pointer;
+    transition: all 0.2s ease-in-out; /* ホバー時のスムーズな変化 */
+  }
+#deck-content {
+    border: 2px dashed #8f030360;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-wrap: wrap; /*折り返し*/
+    gap: 5px;
+    justify-content: flex-start; /*左詰め*/
+    align-content: flex-start;    /*上詰め */
+    flex-grow: 1;
+  }
+.added-card {
+    box-sizing: border-box;
+    text-align: center;
+    margin-bottom: 10px;
+    position: relative;
+  }
+.card-container:hover .delete-button {
+    display: block; /* マウスホバー時に削除ボタンを表示 */
+  }
+  .delete-button {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50%; /*完全な円に調整*/
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    font-size: 12px;
+    display: none; /* 初期状態では非表示 */
+  }
+
+
+/* 🖥 PC用 */
+@media screen and (min-width: 1025px) {
+    .container {
+    grid-template-columns: 1fr 1fr; /* 左右分割 */
+    }
+
+    .left-panel { 
+        padding: 20px;
+    }
+
+    .deck-controls {
+    margin: -5px;
+    }
+    .deck-controls button {
+        padding: 8px 12px;
+    }
+    #search-form {
+    grid-template-columns: repeat(4, auto); /* 4列に分割 */
+    gap: 5px; /* 各要素の間隔 */
+    margin: 0 20px 0 60px;
+    }
+
+    #search-form label {
+        font-size: 14px;
+        margin-right: 5px; /* ラベルと入力フィールドの間隔 */
+        white-space: nowrap; /* ラベルのテキストが折り返されないようにする */
+    }
+    #search-form input, #search-form select {
+        width: 150px;
+    }
+    #search-form button {
+        width: 150px;
+    }
+    .card-pool-container{
+    height: 800px;
+    }
+    .card-pool {
+        grid-template-columns: repeat(6, 1fr); /* 6列のグリッド */
+        border: 1px solid #ccc;
+        background-color: #f9f9f9;
+    }
+    .card-image {
+    width: 117px;  /* 画像の幅を固定 */
+    height: 157px;  /* 高さも固定 */
+    margin: 3px 3px 0 3px;
+    padding: 0 3px 0 3px;
+    }
+    .card-details {
+    text-align: center;
+    margin: 0 0 0 10px;
+    }
+    .card-details h3 {
+    font-size: 14px;
+    margin: 0 0 5px 0;  /* 上部と下部に余白を設定 */
+    }
+    .card-details p {
+        font-size: 12px;
+    }
+    .favorite-toggle {
+        font-size: 20px;
+    }
+    #on-off-button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+    .popup {
+        width: 585px;
+        height: 70px;
+        font-size: 20px;
+    }
+    .close-button {
+        right: 10px;
+        bottom: 10px;
+        font-size: 16px;
+    }
+    #deck-info{
+        gap: 10px;
+    }
+    #deck-info p{
+    margin: 0 0 0 10px ;
+    }
+    #sortButton{
+        font-size: 14px; /* フォントサイズを小さめに */
+    }
+    #deck-content {
+    width: 100%;
+    height: 300px;
+    overflow-y: auto;
+    }
+    .added-card {
+    width: calc(100% / 6 - 10px); /* 6枚横並びで配置 */
+    height: 150px;
+    padding: 10px;
+    }
+}
+
+/* 📱 モバイル (スマホ向け - 410px以下) */
+@media screen and (max-width: 410px) {
+    .container {
+        grid-template-rows: 1fr 1fr; /* 左右分割 */
+        width: 310px;
+    }
+
+    .left-panel { 
+        padding: 10px;
+        width: 310px;
+    }
+    .deck-controls {
+    width: 290px;
+    }
+    .search-container{
+        width: 310px;
+    }
+    
+    #search-form {
+        grid-template-columns: repeat(2, auto); /* 4列に分割 */
+        gap: 2px; /* 各要素の間隔 */
+        width: 310px;
+    }
+    #search-form label {
+        font-size: 10px;
+        margin-right: 2px; /* ラベルと入力フィールドの間隔 */
+    }
+    #search-form input, #search-form select {
+        width: 130px;
+    }
+    #search-form button {
+        width: 130px;
+    }
+
+    .card-pool-container{
+        max-height: 300px;
+        width: 310px;
+    }
+    .card-pool {
+        grid-template-columns: repeat(3, 1fr); /* 6列のグリッド */
+        gap: 5px;
+    }
+    .card-image {
+        width: 50px;  /* 画像の幅を固定 */
+        height: 70px;  /* 高さも固定 */
+        margin: 1px 1px 0 1px;
+        padding: 0 1px 0 1px;
+    }
+    .card-details h3 {
+        font-size: 10px;
+        width: 80px;
+    }
+    .card-details p {
+        font-size: 10px;
+        width: 80px;
+    }
+    .favorite-toggle {
+        font-size: 15px;
+    }
+    #on-off-button {
+        font-size: 10px;
+        width: 310px;
+    }
+    .popup {
+        width: 200px;
+        height: 40px;
+        font-size: 12px;
+    }
+    .close-button {
+        right: 5px;
+        bottom: 5px;
+        font-size: 8px;
+    }
+
+    .right-panel {
+        width: 310px;
+    }
+    .right-panel h2 {
+        font-size: 15px;
+    }
+    #deck-info{
+        gap: 5px;
+        width: 310px;
+        font-size: 10px;
+    }
+    #sortButton{
+        font-size: 10px; /* フォントサイズを小さめに */
+    }
+    #deck-content {
+        width: 310px;
+        max-height: 250px;
+        overflow-y:scroll;
+    }
+    .added-card {
+        width: calc(100% / 6 - 6px); /* 6枚横並びで配置 */
+        height: 60px;
+    }
+}
+
+/* 📱 モバイル (410px以上819px以下) */
+@media screen and (min-width: 411px) and (max-width: 819px) {
+    .container {
+        grid-template-rows: 1fr 1fr; /* 左右分割 */
+        width: 400px;
+        overflow: hidden; /* 縦横スクロールを禁止 */
+    }
+    .left-panel { 
+        padding: 10px;
+        width: 380px;
+      }
+    .deck-controls {
+      width: 380px;
+    }
+    
+    .search-container{
+        width: 380px;
+      }
+      
+      #search-form {
+        grid-template-columns: repeat(2, auto); /* 4列に分割 */
+        gap: 2px; /* 各要素の間隔 */
+        width: 380px;
+      }
+    #search-form label {
+        font-size: 10px;
+        margin-right: 2px; /* ラベルと入力フィールドの間隔 */
+      }
+    #search-form input, #search-form select {
+        width: 130px;
+      }
+    #search-form button {
+        width: 130px;
+      }
+    .card-pool-container{
+        max-height: 300px;
+        width: 380px;
+      }
+    .card-pool {
+        grid-template-columns: repeat(4, 1fr); /* 6列のグリッド */
+        gap: 5px;
+      }
+    .card-image {
+        width: 60px;  /* 画像の幅を固定 */
+        height: 80px;  /* 高さも固定 */
+        margin: 1px 1px 0 1px;
+        padding: 0 1px 0 1px;
+      }
+    .card-details h3 {
+        font-size: 10px;
+        width: 80px;
+      }
+    .card-details p {
+        font-size: 10px;
+        width: 80px;
+      }
+    .favorite-toggle {
+        font-size: 15px;
+      }
+    #on-off-button {
+        font-size: 10px;
+        width: 380px;
+      }
+    .popup {
+        width: 385px;
+        height: 40px;
+        font-size: 15px;
+      }
+    .overlay {
+        width: 380;
+        height: auto;
+      }
+    .close-button {
+        right: 5px;
+        bottom: 5px;
+        font-size: 10px;
+      }
+    .right-panel {
+        width: 380px;
+        height: 300px;
+      }
+    .right-panel h2 {
+        font-size: 15px;
+      }
+    #deck-info{
+        gap: 5px;
+        width: 380px;
+        font-size: 10px;
+      }
+    #sortButton{
+        font-size: 10px; /* フォントサイズを小さめに */
+      }
+    #deck-content {
+        width: 380px;
+        max-height: 300px;
+        overflow-y:scroll;
+      }
+    .added-card {
+        width: calc(100% / 6 - 5px); /* 6枚横並びで配置 */
+        height: 60px;
+      }
+}
+
+/* 📟 タブレット (820px以上1024px以下) */
+@media screen and (min-width: 820px) and (max-width: 1024px) {
+    .container {
+        grid-template-rows: 1fr 1fr; /* 左右分割 */
+      }
+    .left-panel { 
+        padding: 20px;
+      }
+    .deck-controls {
+      margin: -5px;
+    }
+    .deck-controls button {
+        padding: 8px 12px;
+     }
+    #search-form {
+      grid-template-columns: repeat(4, auto); /* 4列に分割 */
+      gap: 5px; /* 各要素の間隔 */
+      margin: 0 20px 0 60px;
+    }
+    #search-form label {
+        font-size: 14px;
+        margin-right: 5px; /* ラベルと入力フィールドの間隔 */
+        white-space: nowrap; /* ラベルのテキストが折り返されないようにする */
+      }
+    #search-form input, #search-form select {
+        width: 150px;
+      }
+    #search-form button {
+        width: 150px;
+      }
+    /* カードプールのスタイル */
+      .card-pool-container{
+        max-height: 600px;
+      }
+    .card-pool {
+        grid-template-columns: repeat(6, 1fr); /* 6列のグリッド */
+        border: 1px solid #ccc;
+        background-color: #f9f9f9;
+      }
+    .card-image {
+        width: 117px;  /* 画像の幅を固定 */
+        height: 157px;  /* 高さも固定 */
+        margin: 1px 1px 0 1px;
+        padding: 0 1px 0 1px;
+      }
+    .card-details h3 {
+        font-size: 10px;
+        width: 100px;
+      }
+    .card-details p {
+        font-size: 10px;
+        width: 100px;
+      }
+    .favorite-toggle {
+        font-size: 20px;
+      }
+    #on-off-button {
+        padding: 10px 20px;
+        font-size: 16px;
+      }
+      .popup {
+        width: 585px;
+        height: 70px;
+        font-size: 20px;
+      }
+    .close-button {
+        right: 10px;
+        bottom: 10px;
+        font-size: 16px;
+      }
+    #deck-info{
+        gap: 10px;
+      }
+    #deck-info p{
+      margin: 0 0 0 10px ;
+    }
+    #sortButton{
+        font-size: 14px; /* フォントサイズを小さめに */
+      }
+    #deck-content {
+        width: 100%;
+        max-height: 600px;
+        overflow-y:scroll;
+      }
+    .added-card {
+        width: calc(100% / 6 - 5px); /* 6枚横並びで配置 */
+        height: 150px;
+        padding: 10px;
+      }
+}

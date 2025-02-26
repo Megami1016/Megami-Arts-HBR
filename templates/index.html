@@ -4,9 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>【へブバン】デッキシミュレーター</title>
-  <link rel="stylesheet" href="/static/css/PC.css" id="css-switcher">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" id="css-switcher">
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-  <script>
+  <!-- <script>
     // CSS切り替え関数
     function switchCSS() {
       const cssSwitcher = document.getElementById("css-switcher");
@@ -40,7 +41,7 @@
       console.log("リサイズ後の画面幅:", window.innerWidth);
     });
   </script>
-  
+   -->
 </head>
 <body>
   <div class="container">

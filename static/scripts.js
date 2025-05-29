@@ -29,7 +29,7 @@ function displayCards(cards) {
 
     // カードの画像
     const imgElement = document.createElement("img");
-    imgElement.src = `/static/images/${card.id}.png`; // 画像パス
+    imgElement.src = `/static/images/${card.id}.webp`; // 画像パス
     imgElement.alt = card.name;
     imgElement.classList.add("card-image");
     //img要素に情報を紐づけする
@@ -402,7 +402,7 @@ document.getElementById("download-deck-button").addEventListener("click", () => 
   html2canvas(captureElement)
     .then((canvas) => {
       const link = document.createElement("a");
-      link.download = `${fileName}.png`;
+      link.download = `${fileName}.webp`;
       link.href = canvas.toDataURL();
       link.click();
       console.log(captureHeight);

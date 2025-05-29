@@ -1,6 +1,6 @@
 import os
 from flask import Flask, render_template, request, jsonify, send_from_directory
-from werkzeug.utils import secure_filename, os
+from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
 

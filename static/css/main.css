@@ -1,6 +1,4 @@
 /* 📌 共通スタイル */
-共通
-
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -75,6 +73,8 @@ body {
     border-radius: 10px;
     background-color: #fff;
     cursor: pointer;
+    min-width: 0;
+    overflow: hidden; /* 長すぎる要素が枠を飛び出すのを防ぐ */
   }
   .card-image {
     object-fit: cover;  /* 画像が枠にフィットするようにする */
@@ -85,6 +85,7 @@ body {
     flex-direction: column;  /* 説明文と名前を縦に並べる */
     overflow: hidden;  /* 長いテキストをはみ出させない */
     text-align: left;  /* 左寄せに設定 */
+    padding: 0 8px 0 6px;
   }
 .card-details h3 {
   font-weight: bold;
@@ -98,7 +99,7 @@ body {
     overflow: hidden;  /* 長すぎるテキストは非表示 */
     text-overflow: ellipsis;  /* 長いテキストは省略表示 */
     display: -webkit-box;
-    -webkit-line-clamp: 4;  /* 行数制限 (3行以内に収める) */
+    -webkit-line-clamp: 6;  /* 行数制限 (3行以内に収める) */
     -webkit-box-orient: vertical;
   }
 .favorite-toggle {

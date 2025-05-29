@@ -54,6 +54,14 @@ function displayCards(cards) {
       button.id = "on-off-button";
       button.textContent = "カード説明 ON/OFF";
       searchContainer.appendChild(button);
+
+      // ← ここから説明テキスト追加
+      const description = document.createElement("span");
+      description.textContent = "※カードの説明を長押しでポップアップ表示されます。";
+      description.style.marginLeft = "10px";
+      description.style.fontSize = "12px";
+      description.style.color = "#555";
+      searchContainer.appendChild(description);
       
       // ボタンのクリックイベント
       button.addEventListener("click", () => {
@@ -270,6 +278,7 @@ function updateCardCount() {
   cardCountDisplay.textContent = cardCount; // カウント数を更新
 }
 
+
 // ソートボタンの作成とイベントリスナーの追加
 function createSortButton() {
   const deckInfo = document.getElementById("deck-info");
@@ -325,9 +334,45 @@ function createSortButton() {
   deckInfo.appendChild(sortButton);
 }
 
+// リセットボタンの作成とイベントリスナーの追加
+function createResetButton() {
+  const deckInfo = document.getElementById("deck-info");
+  const sortButton = document.getElementById("sortButton");
+
+  if (!deckInfo || document.getElementById("resetButton")) return;
+
+  // リセットボタンの作成
+  const resetButton = document.createElement("button");
+  resetButton.id = "resetButton";
+  resetButton.textContent = "リセット";
+  resetButton.style.marginLeft = "10px";
+
+  // リセットボタンのクリックイベント
+  resetButton.addEventListener("click", () => {
+    const deckContent = document.getElementById("deck-content");
+    const cardCountDisplay = document.getElementById("card-count");
+
+    if (deckContent && cardCountDisplay) {
+      deckContent.innerHTML = ""; // 配置カードをすべて削除
+      cardCountDisplay.textContent = "0"; // カウントをリセット
+      addedCards.clear(); // ここで内部セットもクリア！
+    }
+  });
+
+  // ソートボタンの後ろに追加（横並びにしたい場合）
+  if (sortButton) {
+    sortButton.after(resetButton);
+  } else {
+    deckInfo.appendChild(resetButton);
+  }
+}
+
+
+
 // 初期化関数
 function initialize() {
   createSortButton(); // ソートボタンを作成
+  createResetButton();
   updateCardCount(); // 初期のカード数を更新
 }
 

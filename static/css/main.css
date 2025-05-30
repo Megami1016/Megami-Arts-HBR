@@ -69,6 +69,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     border: 1px solid #888;
     border-radius: 10px;
     background-color: #fff;
@@ -82,6 +83,7 @@ body {
   }
 .card-details {
     display: none; /* 初期状態は非表示 */
+    flex-grow: 1; /* 余白を埋めるようにして、★を押し下げる */
     flex-direction: column;  /* 説明文と名前を縦に並べる */
     overflow: hidden;  /* 長いテキストをはみ出させない */
     text-align: left;  /* 左寄せに設定 */

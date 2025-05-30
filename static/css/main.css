@@ -89,8 +89,8 @@ body {
   }
 .card-details h3 {
   font-weight: bold;
-  text-overflow: ellipsis;  /* 名前が長すぎる場合、省略表示 */
-  white-space: nowrap;  /* 改行させず一行で表示 */
+  /*text-overflow: ellipsis;  /* 名前が長すぎる場合、省略表示 */
+  /*white-space: nowrap;  /* 改行させず一行で表示 */
   overflow: hidden;  /* はみ出す部分を非表示 */
 }
 .card-details p {

@@ -19,7 +19,7 @@
       "style": "A",
       "image": "/static/images/A_和泉ユキ.webp",
       "unit": "31A",
-      "type": "ドロー",
+      "type": "アーツドロー",
       "season": "1,2,3,4,5,6",
       "number": "2"
     },
@@ -79,7 +79,7 @@
       "style": "S",
       "image": "/static/images/S_茅森月歌.webp",
       "unit": "31A",
-      "type": "ノーマル",
+      "type": "ノーマル/討伐効果",
       "season": "1,2,3,4,5,6",
       "number": "1"
     },
@@ -91,7 +91,7 @@
       "style": "S",
       "image": "/static/images/S_和泉ユキ.webp",
       "unit": "31A",
-      "type": "ドロー",
+      "type": "アーツドロー",
       "season": "1,2,3,4,5,6",
       "number": "2"
     },
@@ -151,7 +151,7 @@
       "style": "SS",
       "image": "/static/images/SS_茅森月歌.webp",
       "unit": "31A",
-      "type": "ドロー/エース",
+      "type": "エースドロー/エース/討伐効果",
       "season": "1,2,3,4,5,6",
       "number": "1"
     },
@@ -163,7 +163,7 @@
       "style": "SS",
       "image": "/static/images/SS_和泉ユキ.webp",
       "unit": "31A",
-      "type": "ドロー/発動回数制限/消費軽減",
+      "type": "アーツドロー/発動回数制限/消費軽減",
       "season": "1,2,3,4,5,6",
       "number": "2"
     },
@@ -175,7 +175,7 @@
       "style": "SS",
       "image": "/static/images/SS_逢川めぐみ.webp",
       "unit": "31A",
-      "type": "バースト",
+      "type": "バースト/討伐効果",
       "season": "1,2,3,4,5,6",
       "number": "3"
     },
@@ -223,7 +223,7 @@
       "style": "SS",
       "image": "/static/images/SS_茅森月歌（水着）.webp",
       "unit": "31A",
-      "type": "討伐（全対象）/除外",
+      "type": "討伐（全対象）/除外/討伐効果",
       "season": "3,4,5,6",
       "number": "1"
     },
@@ -271,7 +271,7 @@
       "style": "SS",
       "image": "/static/images/SS_朝倉可憐（水着）.webp",
       "unit": "31A",
-      "type": "スコアボーナス/経験値上昇/発動回数制限/討伐（全対象）/除外",
+      "type": "スコアボーナス/経験値上昇/発動回数制限/討伐（全対象）/除外/討伐効果",
       "season": "3,4,5,6",
       "number": "5"
     },
@@ -331,7 +331,7 @@
       "style": "A",
       "image": "/static/images/A_樋口聖華.webp",
       "unit": "31B",
-      "type": "ドロー",
+      "type": "アーツドロー",
       "season": "1,2,3,5",
       "number": "4"
     },
@@ -379,7 +379,7 @@
       "style": "S",
       "image": "/static/images/S_水瀬いちご.webp",
       "unit": "31B",
-      "type": "討伐（全対象）/消費軽減",
+      "type": "討伐（全対象）/消費軽減/討伐効果",
       "season": "1,2,3,5",
       "number": "2"
     },
@@ -391,7 +391,7 @@
       "style": "S",
       "image": "/static/images/S_水瀬すもも.webp",
       "unit": "31B",
-      "type": "ノーマル",
+      "type": "ノーマル/討伐効果",
       "season": "1,2,3,5",
       "number": "3"
     },
@@ -427,7 +427,7 @@
       "style": "S",
       "image": "/static/images/S_ビャッコ.webp",
       "unit": "31B",
-      "type": "パワー/捨て札効果/ノーマル",
+      "type": "パワー/捨て札効果/ノーマル/討伐効果",
       "season": "1,2,3,5",
       "number": "6"
     },
@@ -451,7 +451,7 @@
       "style": "SS",
       "image": "/static/images/SS_水瀬いちご.webp",
       "unit": "31B",
-      "type": "討伐（全対象）/消費軽減",
+      "type": "討伐（全対象）/消費軽減/討伐効果",
       "season": "1,2,3,5",
       "number": "2"
     },
@@ -523,7 +523,7 @@
       "style": "A",
       "image": "/static/images/A_桜庭聖羅.webp",
       "unit": "31C",
-      "type": "ドロー",
+      "type": "アーツドロー",
       "season": "2,3,5",
       "number": "2"
     },
@@ -535,7 +535,7 @@
       "style": "A",
       "image": "/static/images/A_天音巫呼.webp",
       "unit": "31C",
-      "type": "ドロー",
+      "type": "アーツドロー",
       "season": "2,3,5",
       "number": "3"
     },
@@ -607,7 +607,7 @@
       "style": "S",
       "image": "/static/images/S_天音巫呼.webp",
       "unit": "31C",
-      "type": "討伐（全対象）",
+      "type": "討伐（全対象）/討伐効果",
       "season": "2,3,5",
       "number": "3"
     },
@@ -739,7 +739,7 @@
       "style": "A",
       "image": "/static/images/A_石井色葉.webp",
       "unit": "31D",
-      "type": "ドロー/除外",
+      "type": "アーツドロー/除外",
       "season": "4,5",
       "number": "2"
     },
@@ -775,7 +775,7 @@
       "style": "A",
       "image": "/static/images/A_伊達朱里.webp",
       "unit": "31D",
-      "type": "エース/除外",
+      "type": "エース/除外/討伐効果",
       "season": "4,5",
       "number": "5"
     },
@@ -847,7 +847,7 @@
       "style": "S",
       "image": "/static/images/S_伊達朱里.webp",
       "unit": "31D",
-      "type": "エース/除外",
+      "type": "エース/除外/討伐効果",
       "season": "4,5",
       "number": "5"
     },
@@ -883,7 +883,7 @@
       "style": "SS",
       "image": "/static/images/SS_石井色葉.webp",
       "unit": "31D",
-      "type": "ドロー/除外",
+      "type": "アーツドロー/除外",
       "season": "4,5",
       "number": "2"
     },
@@ -919,7 +919,7 @@
       "style": "SS",
       "image": "/static/images/SS_伊達朱里.webp",
       "unit": "31D",
-      "type": "討伐（全対象）/カード追加",
+      "type": "討伐（全対象）/カード追加/討伐効果",
       "season": "4,5",
       "number": "5"
     },
@@ -967,7 +967,7 @@
       "style": "A",
       "image": "/static/images/A_大島三野里.webp",
       "unit": "31E",
-      "type": "ドロー/パワー",
+      "type": "アーツドロー/パワー",
       "season": "1,2,4,6",
       "number": "3"
     },
@@ -1015,7 +1015,7 @@
       "style": "S",
       "image": "/static/images/S_大島一千子.webp",
       "unit": "31E",
-      "type": "ドロー",
+      "type": "アーツドロー",
       "season": "1,2,4,6",
       "number": "1"
     },
@@ -1123,7 +1123,7 @@
       "style": "SS",
       "image": "/static/images/SS_大島四ツ葉.webp",
       "unit": "31E",
-      "type": "カード追加/ドロー",
+      "type": "カード追加/アーツドロー",
       "season": "1,2,4,6",
       "number": "4"
     },
@@ -1159,7 +1159,7 @@
       "style": "A",
       "image": "/static/images/A_柳美音.webp",
       "unit": "31F",
-      "type": "チャージ蓄積/ドロー",
+      "type": "チャージ蓄積/アーツドロー",
       "season": "3,4,6",
       "number": "1"
     },
@@ -1171,7 +1171,7 @@
       "style": "A",
       "image": "/static/images/A_丸山奏多.webp",
       "unit": "31F",
-      "type": "ドロー/消費軽減",
+      "type": "アーツドロー/消費軽減",
       "season": "3,4,6",
       "number": "2"
     },
@@ -1207,7 +1207,7 @@
       "style": "A",
       "image": "/static/images/A_夏目祈.webp",
       "unit": "31F",
-      "type": "ノーマル/チャージ消費",
+      "type": "ノーマル/チャージ消費/討伐効果",
       "season": "3,4,6",
       "number": "5"
     },
@@ -1219,7 +1219,7 @@
       "style": "A",
       "image": "/static/images/A_黒沢真希.webp",
       "unit": "31F",
-      "type": "ドロー/エース/チャージ消費",
+      "type": "エースドロー/エース/チャージ消費/討伐効果",
       "season": "3,4,6",
       "number": "6"
     },
@@ -1231,7 +1231,7 @@
       "style": "S",
       "image": "/static/images/S_柳美音.webp",
       "unit": "31F",
-      "type": "チャージ蓄積/ドロー",
+      "type": "チャージ蓄積/アーツドロー",
       "season": "3,4,6",
       "number": "1"
     },
@@ -1303,7 +1303,7 @@
       "style": "SS",
       "image": "/static/images/SS_柳美音.webp",
       "unit": "31F",
-      "type": "ドロー/除外",
+      "type": "アーツドロー/除外",
       "season": "3,4,6",
       "number": "1"
     },
@@ -1315,7 +1315,7 @@
       "style": "SS",
       "image": "/static/images/SS_丸山奏多.webp",
       "unit": "31F",
-      "type": "バースト/チャージ消費",
+      "type": "バースト/チャージ消費/討伐効果",
       "season": "3,4,6",
       "number": "2"
     },
@@ -1339,7 +1339,7 @@
       "style": "SS",
       "image": "/static/images/SS_松岡チロル.webp",
       "unit": "31F",
-      "type": "ノーマル/消費軽減",
+      "type": "ノーマル/消費軽減/討伐効果",
       "season": "3,4,6",
       "number": "4"
     },
@@ -1351,7 +1351,7 @@
       "style": "SS",
       "image": "/static/images/SS_夏目祈.webp",
       "unit": "31F",
-      "type": "討伐（全対象）/チャージ消費",
+      "type": "討伐（全対象）/チャージ消費/討伐効果",
       "season": "3,4,6",
       "number": "5"
     },
@@ -1423,14 +1423,14 @@
       "style": "A",
       "image": "/static/images/A_マリア・デ・アンジェリス.webp",
       "unit": "31X",
-      "type": "ノーマル/SP減少",
+      "type": "ノーマル/SP減少/討伐効果",
       "season": "6",
       "number": "5"
     },
     {
       "id": "A_シャルロッタ・スコポフスカヤ",
       "name": "A_シャルロッタ・スコポフスカヤ",
-      "effect": " [左から1番目]のカードを「SS_茅森月歌」に変化 / パーティのSPを6減少",
+      "effect": " [左から1番目]のカードを「SS_茅森月歌（通常）」に変化 / パーティのSPを6減少",
       "cost": 1,
       "style": "A",
       "image": "/static/images/A_シャルロッタ・スコポフスカヤ.webp",
@@ -1447,7 +1447,7 @@
       "style": "S",
       "image": "/static/images/S_キャロル・リーパー.webp",
       "unit": "31X",
-      "type": "ドロー/SP減少",
+      "type": "アーツドロー/SP減少",
       "season": "6",
       "number": "1"
     },
@@ -1466,7 +1466,7 @@
     {
       "id": "S_アイリーン・レドメイン",
       "name": "S_アイリーン・レドメイン",
-      "effect": "「毎ターンSP+1」のエンチャントを付与(3回まで重ねがけ可能)",
+      "effect": "「毎ターンSP+1（後衛）」のエンチャントを付与(3回まで重ねがけ可能)",
       "cost": 3,
       "style": "S",
       "image": "/static/images/S_アイリーン・・レドメイン.webp",
@@ -1495,14 +1495,14 @@
       "style": "S",
       "image": "/static/images/S_マリア・デ・アンジェリス.webp",
       "unit": "31X",
-      "type": "ノーマル/SP減少",
+      "type": "ノーマル/SP減少/討伐効果",
       "season": "6",
       "number": "5"
     },
     {
       "id": "S_シャルロッタ・スコポフスカヤ",
       "name": "S_シャルロッタ・スコポフスカヤ",
-      "effect": "「SS_茅森月歌(通常)」をデッキに2枚追加 / パーティのSPを6減少(下限突破)",
+      "effect": "「SS_茅森月歌（通常）」をデッキに2枚追加 / パーティのSPを6減少(下限突破)",
       "cost": 1,
       "style": "S",
       "image": "/static/images/S_シャルロッタ・スコポフスカヤ.webp",
@@ -1567,7 +1567,7 @@
       "style": "SS",
       "image": "/static/images/SS_マリア・デ・アンジェリス.webp",
       "unit": "31X",
-      "type": "討伐（全対象）/SP減少",
+      "type": "討伐（全対象）/SP減少/討伐効果",
       "season": "6",
       "number": "5"
     },

@@ -271,7 +271,7 @@
       "style": "SS",
       "image": "/static/images/SS_朝倉可憐（水着）.webp",
       "unit": "31A",
-      "type": "スコアボーナス/経験値上昇/発動回数制限/討伐（全対象）/除外/討伐効果",
+      "type": "スコアボーナス/経験値上昇/発動回数制限/討伐（全対象）/除外/討伐効果/その他",
       "season": "3,4,5,6",
       "number": "5"
     },
@@ -343,7 +343,7 @@
       "style": "A",
       "image": "/static/images/A_柊木梢.webp",
       "unit": "31B",
-      "type": "捨て札回収",
+      "type": "捨て札回収/その他",
       "season": "1,2,3,5",
       "number": "5"
     },
@@ -415,7 +415,7 @@
       "style": "S",
       "image": "/static/images/S_柊木梢.webp",
       "unit": "31B",
-      "type": "捨て札回収",
+      "type": "捨て札回収/その他",
       "season": "1,2,3,5",
       "number": "5"
     },
@@ -487,7 +487,7 @@
       "style": "SS",
       "image": "/static/images/SS_柊木梢.webp",
       "unit": "31B",
-      "type": "捨て札回収",
+      "type": "捨て札回収/その他",
       "season": "1,2,3,5",
       "number": "5"
     },
@@ -979,7 +979,7 @@
       "style": "A",
       "image": "/static/images/A_大島四ツ葉.webp",
       "unit": "31E",
-      "type": "経験値上昇",
+      "type": "経験値上昇/その他",
       "season": "1,2,4,6",
       "number": "4"
     },
@@ -991,7 +991,7 @@
       "style": "A",
       "image": "/static/images/A_大島五十鈴.webp",
       "unit": "31E",
-      "type": "デッキに返還",
+      "type": "デッキに返還/その他",
       "season": "1,2,4,6",
       "number": "5"
     },
@@ -1051,7 +1051,7 @@
       "style": "S",
       "image": "/static/images/S_大島四ツ葉.webp",
       "unit": "31E",
-      "type": "経験値上昇",
+      "type": "経験値上昇/その他",
       "season": "1,2,4,6",
       "number": "4"
     },
@@ -1087,7 +1087,7 @@
       "style": "SS",
       "image": "/static/images/SS_大島一千子.webp",
       "unit": "31E",
-      "type": "場の拡大/タフネス/除外",
+      "type": "場の拡大/タフネス/除外/その他",
       "season": "1,2,4,6",
       "number": "1"
     },

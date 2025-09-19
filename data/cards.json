@@ -1590,7 +1590,7 @@
       "cost": 3,
       "style": "A",
       "image": "/static/images/A_白河ユイナ.webp",
-      "unit": "30G",
+      "unit": "31G",
       "type": "パワー/除外",
       "season": "7",
       "number": "1"
@@ -1602,7 +1602,7 @@
       "cost": 2,
       "style": "A",
       "image": "/static/images/A_月城最中.webp",
-      "unit": "30G",
+      "unit": "31G",
       "type": "パワー/エース/除外/討伐効果",
       "season": "7",
       "number": "2"
@@ -1614,7 +1614,7 @@
       "cost": 2,
       "style": "A",
       "image": "/static/images/A_桐生美也.webp",
-      "unit": "30G",
+      "unit": "31G",
       "type": "パワー/敵能力低下",
       "season": "7",
       "number": "3"
@@ -1626,7 +1626,7 @@
       "cost": 3,
       "style": "A",
       "image": "/static/images/A_菅原千恵.webp",
-      "unit": "30G",
+      "unit": "31G",
       "type": "タフネス/除外",
       "season": "7",
       "number": "4"
@@ -1638,7 +1638,7 @@
       "cost": 1,
       "style": "A",
       "image": "/static/images/A_小笠原緋雨.webp",
-      "unit": "30G",
+      "unit": "31G",
       "type": "SP回復/チャージ蓄積",
       "season": "7",
       "number": "5"
@@ -1650,7 +1650,7 @@
       "cost": 2,
       "style": "A",
       "image": "/static/images/A_蔵里見.webp",
-      "unit": "30G",
+      "unit": "31G",
       "type": "ステータスUP",
       "season": "7",
       "number": "6"
@@ -1662,7 +1662,7 @@
       "cost": 3,
       "style": "S",
       "image": "/static/images/S_白河ユイナ.webp",
-      "unit": "30G",
+      "unit": "31G",
       "type": "パワー/ノーマル/討伐効果",
       "season": "7",
       "number": "1"
@@ -1674,7 +1674,7 @@
       "cost": 4,
       "style": "S",
       "image": "/static/images/S_月城最中.webp",
-      "unit": "30G",
+      "unit": "31G",
       "type": "パワー/バースト/除外",
       "season": "7",
       "number": "2"
@@ -1686,7 +1686,7 @@
       "cost": 3,
       "style": "S",
       "image": "/static/images/S_桐生美也.webp",
-      "unit": "30G",
+      "unit": "31G",
       "type": "パワー/敵能力低下",
       "season": "7",
       "number": "3"
@@ -1698,7 +1698,7 @@
       "cost": 3,
       "style": "S",
       "image": "/static/images/S_菅原千恵.webp",
-      "unit": "30G",
+      "unit": "31G",
       "type": "タフネス/ノーマル/討伐効果",
       "season": "7",
       "number": "4"
@@ -1710,7 +1710,7 @@
       "cost": 2,
       "style": "S",
       "image": "/static/images/S_小笠原緋雨.webp",
-      "unit": "30G",
+      "unit": "31G",
       "type": "討伐（全対象）/チャージ消費/討伐効果",
       "season": "7",
       "number": "5"
@@ -1722,7 +1722,7 @@
       "cost": 3,
       "style": "S",
       "image": "/static/images/S_蔵里見.webp",
-      "unit": "30G",
+      "unit": "31G",
       "type": "スキル回数回復/その他",
       "season": "7",
       "number": "6"
@@ -1734,7 +1734,7 @@
       "cost": 5,
       "style": "SS",
       "image": "/static/images/SS_白河ユイナ.webp",
-      "unit": "30G",
+      "unit": "31G",
       "type": "その他/永続エンチャント/除外",
       "season": "7",
       "number": "1"
@@ -1746,7 +1746,7 @@
       "cost": 5,
       "style": "SS",
       "image": "/static/images/SS_月城最中.webp",
-      "unit": "30G",
+      "unit": "31G",
       "type": "バフ/除外/永続エンチャント",
       "season": "7",
       "number": "2"
@@ -1758,7 +1758,7 @@
       "cost": 5,
       "style": "SS",
       "image": "/static/images/SS_桐生美也.webp",
-      "unit": "30G",
+      "unit": "31G",
       "type": "デバフ/永続エンチャント/除外",
       "season": "7",
       "number": "3"
@@ -1770,7 +1770,7 @@
       "cost": 5,
       "style": "SS",
       "image": "/static/images/SS_菅原千恵.webp",
-      "unit": "30G",
+      "unit": "31G",
       "type": "OD増加/その他/永続エンチャント/除外",
       "season": "7",
       "number": "4"
@@ -1782,7 +1782,7 @@
       "cost": 5,
       "style": "SS",
       "image": "/static/images/SS_小笠原緋雨.webp",
-      "unit": "30G",
+      "unit": "31G",
       "type": "その他/永続エンチャント/除外",
       "season": "7",
       "number": "5"
@@ -1794,7 +1794,7 @@
       "cost": 5,
       "style": "SS",
       "image": "/static/images/SS_蔵里見.webp",
-      "unit": "30G",
+      "unit": "31G",
       "type": "バフ/その他/永続エンチャント/除外",
       "season": "7",
       "number": "6"

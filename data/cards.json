@@ -1615,7 +1615,7 @@
       "style": "A",
       "image": "/static/images/A_桐生美也.webp",
       "unit": "30G",
-      "type": "パワー/敵能力ダウン",
+      "type": "パワー/敵能力低下",
       "season": "7",
       "number": "3"
     },
@@ -1687,7 +1687,7 @@
       "style": "S",
       "image": "/static/images/S_桐生美也.webp",
       "unit": "30G",
-      "type": "パワー/敵能力ダウン",
+      "type": "パワー/敵能力低下",
       "season": "7",
       "number": "3"
     },

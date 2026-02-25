@@ -209,6 +209,43 @@ body {
     display: none; /* 初期状態では非表示 */
   }
 
+/* main.css に追加 */
+
+/* エンドレスモード用の行スタイル */
+.deck-row {
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: #f9f9f9; /* キャプチャ時に背景が白っぽくなるように */
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.deck-row h3 {
+  font-size: 14px;
+  color: #666;
+  margin: 5px 0;
+  border-left: 4px solid #8f0303;
+  padding-left: 10px;
+}
+
+.row-inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  width: 100%;
+  min-height: 80px; /* 空の状態でも枠を確保 */
+}
+
+/* モード切替スイッチの見た目 */
+.mode-switch {
+  font-size: 12px;
+  background: #eee;
+  padding: 5px 10px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
 
 /* 🖥 PC用 */
 @media screen and (min-width: 1025px) {

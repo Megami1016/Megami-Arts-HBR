@@ -49,6 +49,7 @@
     <div class="left-panel">
       <div class="deck-controls">
         <button id="download-deck-button">デッキを画像としてダウンロード</button>
+        <button id="share-url-button" style="background-color: #6c757d; color: white; border: none; border-radius: 4px; cursor: pointer; padding: 5px 10px; margin-top: 5px;">共有用URLをコピー</button>
       </div>
       <div class="search-container">
         <form id="search-form">
@@ -138,6 +139,9 @@
       <h2>デッキ編集</h2>
       <div id="deck-info">
         <p>現在配置されているカード数: <span id="card-count">0</span> 枚</p>
+        <label class="mode-switch">
+          <input type="checkbox" id="endless-mode-toggle"> 表示切替（エンドレスモード推奨）
+        </label>
       </div>
       <div id="deck-content" class="deck-content">
         <!-- ドロップエリア -->

@@ -1,10 +1,12 @@
 let cardData = []; // カードデータを保存するグローバル変数
+let isEndlessMode = false;// エンドレスモードの状態を追跡する変数
 // JSONファイルを読み込む関数
 fetch('/data/cards.json')
   .then(response => response.json())
   .then(data => {
     cardData = data; // グローバル変数に保存
     displayCards(cardData); // 初期状態でカードを表示
+    loadDeckFromURL();
   })
   .catch(error => {
     console.error("カード情報の読み込みに失敗しました:", error);
@@ -249,6 +251,8 @@ function addCard(cardId) {
   imgElement.setAttribute("unit", card.unit); // cardUnitを渡す
   imgElement.setAttribute("style", card.style);
   imgElement.setAttribute("number", card.number);
+  imgElement.setAttribute("data-type", card.type); // 除外判定用に保持
+  imgElement.setAttribute("data-cid", card.cid);
 
   const deleteButton = document.createElement("button");
   deleteButton.innerText = "X";
@@ -262,6 +266,13 @@ function addCard(cardId) {
   cardContainer.appendChild(imgElement);
   cardContainer.appendChild(deleteButton);
   deckContent.appendChild(cardContainer);
+
+  if (isEndlessMode) {
+    const targetId = card.type.includes("除外") ? "#exclude-row .row-inner" : "#normal-row .row-inner";
+    document.querySelector(targetId).appendChild(cardContainer);
+  } else {
+    document.getElementById("deck-content").appendChild(cardContainer);
+  }
 
   addedCards.add(cardId);
   updateCardCount(); // 配置されたカードの枚数を更新
@@ -323,11 +334,31 @@ function createSortButton() {
       }
     });
 
- 
      // ソート後にカードを再配置
-     cardContainers.forEach(cardContainer => {
-       deckContent.appendChild(cardContainer);
-     });
+     if (isEndlessMode) {
+        // エンドレスモード時はそれぞれの枠の「inner」を取得
+        const normalInner = document.querySelector("#normal-row .row-inner");
+        const excludeInner = document.querySelector("#exclude-row .row-inner");
+
+        // 一旦中身を空にする（重複防止）
+        if (normalInner && excludeInner) {
+            normalInner.innerHTML = "";
+            excludeInner.innerHTML = "";
+
+            cardContainers.forEach(cardContainer => {
+                const img = cardContainer.querySelector("img");
+                const cardType = img.getAttribute("data-type") || "";
+                // data-typeを見て適切な枠に振り分け
+                const target = cardType.includes("除外") ? excludeInner : normalInner;
+                target.appendChild(cardContainer);
+            });
+        }
+    } else {
+        // 通常モードは今まで通り親要素に直接追加
+        cardContainers.forEach(cardContainer => {
+            deckContent.appendChild(cardContainer);
+        });
+    }
    });
 
   // deck-infoの中にソートボタンを追加
@@ -368,12 +399,89 @@ function createResetButton() {
 }
 
 
+/**
+ * 共有用URLを生成してコピーする処理
+ */
+document.getElementById("share-url-button").addEventListener("click", () => {
+  const baseUrl = window.location.origin + window.location.pathname;
+  
+  const deckContent = document.getElementById("deck-content");
+  const cardImages = Array.from(deckContent.querySelectorAll(".added-card img"));
+
+  if (cardImages.length === 0) {
+    alert("デッキにカードがありません。");
+    return;
+  }
+  // const shortCodes = Array.from(addedCards).map(id => {
+  //   const card = cardData.find(c => c.id === id);
+  //   return card ? card.cid : null;
+  // }).filter(cid => cid !== null).join(',');
+  // 2. 画面上の並び順で data-cid を抽出して繋げる
+  const shortCodes = cardImages
+    .map(img => img.getAttribute("data-cid"))
+    .filter(cid => cid !== null)
+    .join(',');
+  // IDをカンマ区切りで結合
+  // const deckIds = Array.from(addedCards).join(',');
+  const params = new URLSearchParams();
+  params.set('deck', shortCodes);
+  
+  // エンドレスモードの状態も保存
+  if (isEndlessMode) {
+    params.set('m', 'e');
+  }
+
+  const shareUrl = `${baseUrl}?${params.toString()}`;
+
+  // クリップボードへコピー
+  navigator.clipboard.writeText(shareUrl).then(() => {
+    alert("共有用URLをコピーしました！\nこのURLを開くと現在のデッキが再現されます。");
+  }).catch(err => {
+    alert("コピーに失敗しました。手動でURLをコピーしてください。");
+  });
+});
+
+// ページ起動時にURLをチェックする処理 (initialize内などで呼ぶ)
+function loadDeckFromURL() {
+    const params = new URLSearchParams(window.location.search);
+    const deckData = params.get('deck');
+    const modeData = params.get('m');
+
+    // モードの復元
+    if (modeData === 'e') {
+        const toggle = document.getElementById("endless-mode-toggle");
+        if (toggle) {
+            toggle.checked = true;
+            isEndlessMode = true;
+            if (typeof refreshDeckDisplay === "function") {
+              refreshDeckDisplay();
+            }    
+        }
+    }
+
+    // カードの復元
+    if (deckData) {
+      const codes = deckData.split(','); // カンマで区切って配列にする
+      codes.forEach(code => {
+        // cards.json の "cid" と一致するカードを探す
+        const card = cardData.find(c => c.cid === code);
+        if (card) {
+          addCard(card.id); // 一致したらデッキに追加
+        } else {
+          console.warn("見つからない識別コードです:", code);
+        }
+      });
+    }
+}
+
 
 // 初期化関数
 function initialize() {
   createSortButton(); // ソートボタンを作成
   createResetButton();
   updateCardCount(); // 初期のカード数を更新
+
+  loadDeckFromURL(); // URLからデッキを読み込む
 }
 
 // ページロード時に初期化
@@ -409,33 +517,55 @@ document.getElementById("download-deck-button").addEventListener("click", () => 
 
   let captureHeight;
 
-  // カード枚数に応じて高さを決定
-  switch (true) {
-    case cardCount <= 18:
-      captureHeight = "600px";
-      break;
-    case 19 <= cardCount && cardCount <= 24:
-      captureHeight = "700px";
-      break;
-    case 25 <= cardCount && cardCount <= 30:
-      captureHeight = "850px";
-      break;
-    case 31 <= cardCount && cardCount <= 36:
-      captureHeight = "1000px";
-      break;
-    case 37 <= cardCount && cardCount <= 42:
-      captureHeight = "1150px";
-      break;
-    case 43 <= cardCount && cardCount <= 48:
-      captureHeight = "1350px";
-      break;
-    case 49 <= cardCount && cardCount <= 54:
-      captureHeight = "1500px";
-      break;
-    default:
-      captureHeight = "1650px";
-      break;
+  if (isEndlessMode) {
+    // 【エンドレスモード時の高さ計算】
+    const normalCards = document.querySelectorAll("#normal-row .added-card").length;
+    const excludeCards = document.querySelectorAll("#exclude-row .added-card").length;
+
+    // 1行あたり6枚として、それぞれの行数を計算
+    const normalRows = Math.ceil(normalCards / 6) || 1; // 0枚でも見出し分として1行計算
+    const excludeRows = Math.ceil(excludeCards / 6) || 1;
+
+    // (行数 × カードの高さ) + 見出しや余白のオフセット
+    // 1行約170px + 見出し等で余裕を持って計算
+    captureHeight = (normalRows + excludeRows) * 180 + 120 + "px";
+  } else {
+    // 【通常モード時の高さ計算（既存ロジックを少し整理）】
+    const cardCount = getCardCount();
+    const rows = Math.ceil(cardCount / 6);
+    captureHeight = rows * 180 + 50 + "px"; 
+    
+    // 念のため最低高さを保証
+    if (cardCount <= 18) captureHeight = "600px";
   }
+
+  // // カード枚数に応じて高さを決定
+  // switch (true) {
+  //   case cardCount <= 18:
+  //     captureHeight = "600px";
+  //     break;
+  //   case 19 <= cardCount && cardCount <= 24:
+  //     captureHeight = "700px";
+  //     break;
+  //   case 25 <= cardCount && cardCount <= 30:
+  //     captureHeight = "850px";
+  //     break;
+  //   case 31 <= cardCount && cardCount <= 36:
+  //     captureHeight = "1000px";
+  //     break;
+  //   case 37 <= cardCount && cardCount <= 42:
+  //     captureHeight = "1150px";
+  //     break;
+  //   case 43 <= cardCount && cardCount <= 48:
+  //     captureHeight = "1350px";
+  //     break;
+  //   case 49 <= cardCount && cardCount <= 54:
+  //     captureHeight = "1500px";
+  //     break;
+  //   default:
+  //     captureHeight = "1650px";
+  //     break;
+  // }
 
   // キャプチャ用スタイルの適用
   captureElement.style.height = captureHeight; // 高さを動的に設定
@@ -444,7 +574,10 @@ document.getElementById("download-deck-button").addEventListener("click", () => 
   captureElement.style.gap = "5px"; // gapを固定値に設定
 
   // キャプチャ処理
-  html2canvas(captureElement)
+  html2canvas(captureElement, {
+    useCORS: true, // 画像の読み込み問題を回避
+    backgroundColor: "#ffffff" // 背景色を指定
+  })
     .then((canvas) => {
       const link = document.createElement("a");
       link.download = `${fileName}.webp`;
@@ -462,3 +595,59 @@ document.getElementById("download-deck-button").addEventListener("click", () => 
       Object.assign(captureElement.style, originalStyle);
     });
 });
+
+// モード切替イベント
+document.getElementById("endless-mode-toggle").addEventListener("change", (e) => {
+  isEndlessMode = e.target.checked;
+  refreshDeckDisplay(); // デッキ表示を更新
+});
+
+function refreshDeckDisplay() {
+  const deckContent = document.getElementById("deck-content");
+  const cards = Array.from(deckContent.querySelectorAll(".card-container"));
+  
+  // 一旦中身をクリア
+  deckContent.innerHTML = "";
+
+  if (isEndlessMode) {
+    // エンドレスモード用の器（上段・下段）を作成
+    deckContent.innerHTML = `
+      <div class="deck-row" id="normal-row"><h3>通常枠</h3><div class="row-inner"></div></div>
+      <div class="deck-row" id="exclude-row"><h3>除外枠</h3><div class="row-inner"></div></div>
+    `;
+    
+    // 既存のカードを振り分け
+    cards.forEach(cardContainer => {
+      const img = cardContainer.querySelector("img");
+      const cardType = img.getAttribute("data-type") || ""; // addCard時に持たせておく
+      const targetId = cardType.includes("除外") ? "#exclude-row .row-inner" : "#normal-row .row-inner";
+      deckContent.querySelector(targetId).appendChild(cardContainer);
+    });
+  } else {
+    // 通常モード：そのまま戻す
+    cards.forEach(cardContainer => deckContent.appendChild(cardContainer));
+  }
+}
+
+// // URLを生成してコピーする関数
+// function generateShareURL() {
+//     const baseUrl = window.location.origin + window.location.pathname;
+    
+//     // 1. デッキ内の全カードIDを取得
+//     const deckIds = Array.from(addedCards).join(',');
+    
+//     // 2. モード情報を取得
+//     const mode = isEndlessMode ? 'endless' : 'normal';
+    
+//     // 3. URLパラメータを作成
+//     const params = new URLSearchParams();
+//     if (deckIds) params.set('deck', deckIds);
+//     params.set('mode', mode);
+    
+//     const shareUrl = `${baseUrl}?${params.toString()}`;
+    
+//     // 4. クリップボードにコピー
+//     navigator.clipboard.writeText(shareUrl).then(() => {
+//         alert("共有用URLをコピーしました！");
+//     });
+// }

@@ -9,7 +9,7 @@
       "image": "/static/images/A_茅森月歌.webp",
       "unit": "31A",
       "type": "ステータスUP/除外",
-      "season": "1,2,3,4,5,6,7,8",
+      "season": "1,2,3,4,5,6,7,8,9",
       "number": "1"
     },
     {
@@ -22,7 +22,7 @@
       "image": "/static/images/A_和泉ユキ.webp",
       "unit": "31A",
       "type": "アーツドロー",
-      "season": "1,2,3,4,5,6,7,8",
+      "season": "1,2,3,4,5,6,7,8,9",
       "number": "2"
     },
     {
@@ -35,7 +35,7 @@
       "image": "/static/images/A_逢川めぐみ.webp",
       "unit": "31A",
       "type": "敵能力低下",
-      "season": "1,2,3,4,5,6,7,8",
+      "season": "1,2,3,4,5,6,7,8,9",
       "number": "3"
     },
     {
@@ -48,7 +48,7 @@
       "image": "/static/images/A_東城つかさ.webp",
       "unit": "31A",
       "type": "パワー",
-      "season": "1,2,3,4,5,6,7,8",
+      "season": "1,2,3,4,5,6,7,8,9",
       "number": "4"
     },
     {
@@ -61,7 +61,7 @@
       "image": "/static/images/A_朝倉可憐.webp",
       "unit": "31A",
       "type": "パワー",
-      "season": "1,2,3,4,5,6,7,8",
+      "season": "1,2,3,4,5,6,7,8,9",
       "number": "5"
     },
     {
@@ -74,7 +74,7 @@
       "image": "/static/images/A_國見タマ.webp",
       "unit": "31A",
       "type": "SP回復",
-      "season": "1,2,3,4,5,6,7,8",
+      "season": "1,2,3,4,5,6,7,8,9",
       "number": "6"
     },
     {
@@ -87,7 +87,7 @@
       "image": "/static/images/S_茅森月歌.webp",
       "unit": "31A",
       "type": "ノーマル/討伐効果",
-      "season": "1,2,3,4,5,6,7,8",
+      "season": "1,2,3,4,5,6,7,8,9",
       "number": "1"
     },
     {
@@ -100,7 +100,7 @@
       "image": "/static/images/S_和泉ユキ.webp",
       "unit": "31A",
       "type": "アーツドロー",
-      "season": "1,2,3,4,5,6,7,8",
+      "season": "1,2,3,4,5,6,7,8,9",
       "number": "2"
     },
     {
@@ -113,7 +113,7 @@
       "image": "/static/images/S_逢川めぐみ.webp",
       "unit": "31A",
       "type": "敵能力低下",
-      "season": "1,2,3,4,5,6,7,8",
+      "season": "1,2,3,4,5,6,7,8,9",
       "number": "3"
     },
     {
@@ -126,7 +126,7 @@
       "image": "/static/images/S_東城つかさ.webp",
       "unit": "31A",
       "type": "パワー",
-      "season": "1,2,3,4,5,6,7,8",
+      "season": "1,2,3,4,5,6,7,8,9",
       "number": "4"
     },
     {
@@ -139,7 +139,7 @@
       "image": "/static/images/S_朝倉可憐.webp",
       "unit": "31A",
       "type": "パワー/除外",
-      "season": "1,2,3,4,5,6,7,8",
+      "season": "1,2,3,4,5,6,7,8,9",
       "number": "5"
     },
     {
@@ -152,7 +152,7 @@
       "image": "/static/images/S_國見タマ.webp",
       "unit": "31A",
       "type": "SP回復",
-      "season": "1,2,3,4,5,6,7,8",
+      "season": "1,2,3,4,5,6,7,8,9",
       "number": "6"
     },
     {
@@ -165,7 +165,7 @@
       "image": "/static/images/SS_茅森月歌.webp",
       "unit": "31A",
       "type": "エース/討伐効果",
-      "season": "1,2,3,4,5,6,7,8",
+      "season": "1,2,3,4,5,6,7,8,9",
       "number": "1"
     },
     {
@@ -178,7 +178,7 @@
       "image": "/static/images/SS_和泉ユキ.webp",
       "unit": "31A",
       "type": "アーツドロー/消費軽減",
-      "season": "1,2,3,4,5,6,7,8",
+      "season": "1,2,3,4,5,6,7,8,9",
       "number": "2"
     },
     {
@@ -191,7 +191,7 @@
       "image": "/static/images/SS_逢川めぐみ.webp",
       "unit": "31A",
       "type": "バースト",
-      "season": "1,2,3,4,5,6,7,8",
+      "season": "1,2,3,4,5,6,7,8,9",
       "number": "3"
     },
     {
@@ -204,7 +204,7 @@
       "image": "/static/images/SS_東城つかさ.webp",
       "unit": "31A",
       "type": "二回発動/その他",
-      "season": "1,2,3,4,5,6,7,8",
+      "season": "1,2,3,4,5,6,7,8,9",
       "number": "4"
     },
     {
@@ -217,7 +217,7 @@
       "image": "/static/images/SS_朝倉可憐.webp",
       "unit": "31A",
       "type": "ステコピー/除外/その他",
-      "season": "1,2,3,4,5,6,7,8",
+      "season": "1,2,3,4,5,6,7,8,9",
       "number": "5"
     },
     {
@@ -230,7 +230,7 @@
       "image": "/static/images/SS_國見タマ.webp",
       "unit": "31A",
       "type": "延長",
-      "season": "1,2,3,4,5,6,7,8",
+      "season": "1,2,3,4,5,6,7,8,9",
       "number": "6"
     },
     {
@@ -243,7 +243,7 @@
       "image": "/static/images/SS_茅森月歌（水着）.webp",
       "unit": "31A",
       "type": "討伐（全対象）/除外/討伐効果",
-      "season": "3,4,5,6,7,8",
+      "season": "3,4,5,6,7,8,9",
       "number": "1"
     },
     {
@@ -256,7 +256,7 @@
       "image": "/static/images/SS_和泉ユキ（水着）.webp",
       "unit": "31A",
       "type": "スキル回数回復/除外",
-      "season": "3,4,5,6,7,8",
+      "season": "3,4,5,6,7,8,9",
       "number": "2"
     },
     {
@@ -269,7 +269,7 @@
       "image": "/static/images/SS_逢川めぐみ（水着）.webp",
       "unit": "31A",
       "type": "敵能力低下/除外",
-      "season": "3,4,5,6,7,8",
+      "season": "3,4,5,6,7,8,9",
       "number": "3"
     },
     {
@@ -282,7 +282,7 @@
       "image": "/static/images/SS_東城つかさ（水着）.webp",
       "unit": "31A",
       "type": "バフ/除外/永続エンチャント",
-      "season": "3,4,5,6,7,8",
+      "season": "3,4,5,6,7,8,9",
       "number": "4"
     },
     {
@@ -295,7 +295,7 @@
       "image": "/static/images/SS_朝倉可憐（水着）.webp",
       "unit": "31A",
       "type": "スコアボーナス/経験値上昇/討伐（全対象）/除外/討伐効果/その他",
-      "season": "3,4,5,6,7,8",
+      "season": "3,4,5,6,7,8,9",
       "number": "5"
     },
     {
@@ -308,7 +308,7 @@
       "image": "/static/images/SS_國見タマ（水着）.webp",
       "unit": "31A",
       "type": "DP復活/除外/その他",
-      "season": "3,4,5,6,7,8",
+      "season": "3,4,5,6,7,8,9",
       "number": "6"
     },
     {
@@ -321,7 +321,7 @@
       "image": "/static/images/A_蒼井えりか.webp",
       "unit": "31B",
       "type": "タフネス/捨て札効果",
-      "season": "1,2,3,5,8",
+      "season": "1,2,3,5,8,9",
       "number": "1"
     },
     {
@@ -334,7 +334,7 @@
       "image": "/static/images/A_水瀬いちご.webp",
       "unit": "31B",
       "type": "ステータスUP/消費軽減",
-      "season": "1,2,3,5,8",
+      "season": "1,2,3,5,8,9",
       "number": "2"
     },
     {
@@ -347,7 +347,7 @@
       "image": "/static/images/A_水瀬すもも.webp",
       "unit": "31B",
       "type": "パワー",
-      "season": "1,2,3,5,8",
+      "season": "1,2,3,5,8,9",
       "number": "3"
     },
     {
@@ -360,7 +360,7 @@
       "image": "/static/images/A_樋口聖華.webp",
       "unit": "31B",
       "type": "アーツドロー",
-      "season": "1,2,3,5,8",
+      "season": "1,2,3,5,8,9",
       "number": "4"
     },
     {
@@ -373,7 +373,7 @@
       "image": "/static/images/A_柊木梢.webp",
       "unit": "31B",
       "type": "捨て札回収/その他",
-      "season": "1,2,3,5,8",
+      "season": "1,2,3,5,8,9",
       "number": "5"
     },
     {
@@ -386,7 +386,7 @@
       "image": "/static/images/A_ビャッコ.webp",
       "unit": "31B",
       "type": "パワー/捨て札効果",
-      "season": "1,2,3,5,8",
+      "season": "1,2,3,5,8,9",
       "number": "6"
     },
     {
@@ -399,7 +399,7 @@
       "image": "/static/images/S_蒼井えりか.webp",
       "unit": "31B",
       "type": "タフネス/捨て札効果",
-      "season": "1,2,3,5,8",
+      "season": "1,2,3,5,8,9",
       "number": "1"
     },
     {
@@ -412,7 +412,7 @@
       "image": "/static/images/S_水瀬いちご.webp",
       "unit": "31B",
       "type": "討伐（全対象）/消費軽減/討伐効果",
-      "season": "1,2,3,5,8",
+      "season": "1,2,3,5,8,9",
       "number": "2"
     },
     {
@@ -425,7 +425,7 @@
       "image": "/static/images/S_水瀬すもも.webp",
       "unit": "31B",
       "type": "ノーマル/討伐効果",
-      "season": "1,2,3,5,8",
+      "season": "1,2,3,5,8,9",
       "number": "3"
     },
     {
@@ -438,7 +438,7 @@
       "image": "/static/images/S_樋口聖華.webp",
       "unit": "31B",
       "type": "SP回復",
-      "season": "1,2,3,5,8",
+      "season": "1,2,3,5,8,9",
       "number": "4"
     },
     {
@@ -451,7 +451,7 @@
       "image": "/static/images/S_柊木梢.webp",
       "unit": "31B",
       "type": "捨て札回収/その他",
-      "season": "1,2,3,5,8",
+      "season": "1,2,3,5,8,9",
       "number": "5"
     },
     {
@@ -464,7 +464,7 @@
       "image": "/static/images/S_ビャッコ.webp",
       "unit": "31B",
       "type": "パワー/捨て札効果/ノーマル/討伐効果",
-      "season": "1,2,3,5,8",
+      "season": "1,2,3,5,8,9",
       "number": "6"
     },
     {
@@ -477,7 +477,7 @@
       "image": "/static/images/SS_蒼井えりか.webp",
       "unit": "31B",
       "type": "タフネス/捨て札効果/カード追加",
-      "season": "1,2,3,5,8",
+      "season": "1,2,3,5,8,9",
       "number": "1"
     },
     {
@@ -490,7 +490,7 @@
       "image": "/static/images/SS_水瀬いちご.webp",
       "unit": "31B",
       "type": "討伐（全対象）/消費軽減/討伐効果",
-      "season": "1,2,3,5,8",
+      "season": "1,2,3,5,8,9",
       "number": "2"
     },
     {
@@ -503,7 +503,7 @@
       "image": "/static/images/SS_水瀬すもも.webp",
       "unit": "31B",
       "type": "パワー/除外",
-      "season": "1,2,3,5,8",
+      "season": "1,2,3,5,8,9",
       "number": "3"
     },
     {
@@ -516,7 +516,7 @@
       "image": "/static/images/SS_樋口聖華.webp",
       "unit": "31B",
       "type": "延長",
-      "season": "1,2,3,5,8",
+      "season": "1,2,3,5,8,9",
       "number": "4"
     },
     {
@@ -529,7 +529,7 @@
       "image": "/static/images/SS_柊木梢.webp",
       "unit": "31B",
       "type": "捨て札回収/その他",
-      "season": "1,2,3,5,8",
+      "season": "1,2,3,5,8,9",
       "number": "5"
     },
     {
@@ -542,7 +542,7 @@
       "image": "/static/images/SS_ビャッコ.webp",
       "unit": "31B",
       "type": "ステータスUP/除外",
-      "season": "1,2,3,5,8",
+      "season": "1,2,3,5,8,9",
       "number": "6"
     },
     {
@@ -568,7 +568,7 @@
       "image": "/static/images/A_桜庭聖羅.webp",
       "unit": "31C",
       "type": "アーツドロー",
-      "season": "2,3,5",
+      "season": "2,3,5,9",
       "number": "2"
     },
     {
@@ -581,7 +581,7 @@
       "image": "/static/images/A_天音巫呼.webp",
       "unit": "31C",
       "type": "アーツドロー",
-      "season": "2,3,5",
+      "season": "2,3,5,9",
       "number": "3"
     },
     {
@@ -594,7 +594,7 @@
       "image": "/static/images/A_豊後弥生.webp",
       "unit": "31C",
       "type": "変化",
-      "season": "2,3,5",
+      "season": "2,3,5,9",
       "number": "4"
     },
     {
@@ -607,7 +607,7 @@
       "image": "/static/images/A_神崎アーデルハイド.webp",
       "unit": "31C",
       "type": "ステータスUP",
-      "season": "2,3,5",
+      "season": "2,3,5,9",
       "number": "5"
     },
     {
@@ -620,7 +620,7 @@
       "image": "/static/images/A_佐月マリ.webp",
       "unit": "31C",
       "type": "SP回復",
-      "season": "2,3,5",
+      "season": "2,3,5,9",
       "number": "6"
     },
     {
@@ -633,7 +633,7 @@
       "image": "/static/images/S_山脇_ボン_イヴァール.webp",
       "unit": "31C",
       "type": "消費軽減",
-      "season": "2,3,5",
+      "season": "2,3,5,9",
       "number": "1"
     },
     {
@@ -646,7 +646,7 @@
       "image": "/static/images/S_桜庭聖羅.webp",
       "unit": "31C",
       "type": "ステータスUP/消費軽減",
-      "season": "2,3,5",
+      "season": "2,3,5,9",
       "number": "2"
     },
     {
@@ -659,7 +659,7 @@
       "image": "/static/images/S_天音巫呼.webp",
       "unit": "31C",
       "type": "討伐（全対象）/討伐効果",
-      "season": "2,3,5",
+      "season": "2,3,5,9",
       "number": "3"
     },
     {
@@ -672,7 +672,7 @@
       "image": "/static/images/S_豊後弥生.webp",
       "unit": "31C",
       "type": "カード追加",
-      "season": "2,3,5",
+      "season": "2,3,5,9",
       "number": "4"
     },
     {
@@ -698,7 +698,7 @@
       "image": "/static/images/S_佐月マリ.webp",
       "unit": "31C",
       "type": "ステータスUP/除外",
-      "season": "2,3,5",
+      "season": "2,3,5,9",
       "number": "6"
     },
     {
@@ -711,7 +711,7 @@
       "image": "/static/images/SS_山脇_ボン_イヴァール.webp",
       "unit": "31C",
       "type": "消費軽減/除外",
-      "season": "2,3,5",
+      "season": "2,3,5,9",
       "number": "1"
     },
     {
@@ -724,7 +724,7 @@
       "image": "/static/images/SS_桜庭聖羅.webp",
       "unit": "31C",
       "type": "バフ/消費軽減",
-      "season": "2,3,5",
+      "season": "2,3,5,9",
       "number": "2"
     },
     {
@@ -737,7 +737,7 @@
       "image": "/static/images/SS_天音巫呼.webp",
       "unit": "31C",
       "type": "複製/その他",
-      "season": "2,3,5",
+      "season": "2,3,5,9",
       "number": "3"
     },
     {
@@ -750,7 +750,7 @@
       "image": "/static/images/SS_豊後弥生.webp",
       "unit": "31C",
       "type": "パワー/除外",
-      "season": "2,3,5",
+      "season": "2,3,5,9",
       "number": "4"
     },
     {
@@ -763,7 +763,7 @@
       "image": "/static/images/SS_神崎アーデルハイド.webp",
       "unit": "31C",
       "type": "カード追加",
-      "season": "2,3,5",
+      "season": "2,3,5,9",
       "number": "5"
     },
     {
@@ -776,7 +776,7 @@
       "image": "/static/images/SS_佐月マリ.webp",
       "unit": "31C",
       "type": "変化",
-      "season": "2,3,5",
+      "season": "2,3,5,9",
       "number": "6"
     },
     {
@@ -1491,7 +1491,7 @@
       "image": "/static/images/A_キャロル・リーパー.webp",
       "unit": "31X",
       "type": "SP回復/除外/永続エンチャント",
-      "season": "6,7",
+      "season": "6,7,9",
       "number": "1"
     },
     {
@@ -1504,7 +1504,7 @@
       "image": "/static/images/A_李映夏.webp",
       "unit": "31X",
       "type": "ステータスUP/SP減少",
-      "season": "6,7",
+      "season": "6,7,9",
       "number": "2"
     },
     {
@@ -1517,7 +1517,7 @@
       "image": "/static/images/A_アイリーン・・レドメイン.webp",
       "unit": "31X",
       "type": "SP回復",
-      "season": "6,7",
+      "season": "6,7,9",
       "number": "3"
     },
     {
@@ -1530,7 +1530,7 @@
       "image": "/static/images/A_ヴリティカ・バラクリシュナン.webp",
       "unit": "31X",
       "type": "SP回復",
-      "season": "6,7",
+      "season": "6,7,9",
       "number": "4"
     },
     {
@@ -1543,7 +1543,7 @@
       "image": "/static/images/A_マリア・デ・アンジェリス.webp",
       "unit": "31X",
       "type": "ノーマル/SP減少/討伐効果",
-      "season": "6,7",
+      "season": "6,7,9",
       "number": "5"
     },
     {
@@ -1556,7 +1556,7 @@
       "image": "/static/images/A_シャルロッタ・スコポフスカヤ.webp",
       "unit": "31X",
       "type": "変化/SP減少",
-      "season": "6,7",
+      "season": "6,7,9",
       "number": "6"
     },
     {
@@ -1569,7 +1569,7 @@
       "image": "/static/images/S_キャロル・リーパー.webp",
       "unit": "31X",
       "type": "アーツドロー/SP減少",
-      "season": "6,7",
+      "season": "6,7,9",
       "number": "1"
     },
     {
@@ -1582,7 +1582,7 @@
       "image": "/static/images/S_李映夏.webp",
       "unit": "31X",
       "type": "ステータスUP/SP減少",
-      "season": "6,7",
+      "season": "6,7,9",
       "number": "2"
     },
     {
@@ -1595,7 +1595,7 @@
       "image": "/static/images/S_アイリーン・レドメイン.webp",
       "unit": "31X",
       "type": "SP回復",
-      "season": "6,7",
+      "season": "6,7,9",
       "number": "3"
     },
     {
@@ -1608,7 +1608,7 @@
       "image": "/static/images/S_ヴリティカ・バラクリシュナン.webp",
       "unit": "31X",
       "type": "SP回復",
-      "season": "6,7",
+      "season": "6,7,9",
       "number": "4"
     },
     {
@@ -1621,7 +1621,7 @@
       "image": "/static/images/S_マリア・デ・アンジェリス.webp",
       "unit": "31X",
       "type": "ノーマル/SP減少/討伐効果",
-      "season": "6,7",
+      "season": "6,7,9",
       "number": "5"
     },
     {
@@ -1634,7 +1634,7 @@
       "image": "/static/images/S_シャルロッタ・スコポフスカヤ.webp",
       "unit": "31X",
       "type": "カード追加/SP減少",
-      "season": "6,7",
+      "season": "6,7,9",
       "number": "6"
     },
     {
@@ -1647,7 +1647,7 @@
       "image": "/static/images/SS_キャロル・リーパー.webp",
       "unit": "31X",
       "type": "消費軽減/SP減少",
-      "season": "6,7",
+      "season": "6,7,9",
       "number": "1"
     },
     {
@@ -1660,7 +1660,7 @@
       "image": "/static/images/SS_李映夏.webp",
       "unit": "31X",
       "type": "パワー/タフネス/SP減少/除外",
-      "season": "6,7",
+      "season": "6,7,9",
       "number": "2"
     },
     {
@@ -1673,7 +1673,7 @@
       "image": "/static/images/SS_アイリーン・レドメイン.webp",
       "unit": "31X",
       "type": "SP回復",
-      "season": "6,7",
+      "season": "6,7,9",
       "number": "3"
     },
     {
@@ -1686,7 +1686,7 @@
       "image": "/static/images/SS_ヴリティカ・バラクリシュナン.webp",
       "unit": "31X",
       "type": "SP回復/除外/永続エンチャント",
-      "season": "6,7",
+      "season": "6,7,9",
       "number": "4"
     },
     {
@@ -1699,7 +1699,7 @@
       "image": "/static/images/SS_マリア・デ・アンジェリス.webp",
       "unit": "31X",
       "type": "討伐（全対象）/SP減少/討伐効果",
-      "season": "6,7",
+      "season": "6,7,9",
       "number": "5"
     },
     {
@@ -1712,7 +1712,7 @@
       "image": "/static/images/SS_シャルロッタ・スコポフスカヤ.webp",
       "unit": "31X",
       "type": "延長/除外/永続エンチャント",
-      "season": "6,7",
+      "season": "6,7,9",
       "number": "6"
     },
     {

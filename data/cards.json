@@ -555,7 +555,7 @@
       "image": "/static/images/A_山脇_ボン_イヴァール.webp",
       "unit": "31C",
       "type": "ステータスUP/除外",
-      "season": "2,3,5",
+      "season": "2,3,5,9",
       "number": "1"
     },
     {
@@ -685,7 +685,7 @@
       "image": "/static/images/S_神崎アーデルハイド.webp",
       "unit": "31C",
       "type": "変化",
-      "season": "2,3,5",
+      "season": "2,3,5,9",
       "number": "5"
     },
     {

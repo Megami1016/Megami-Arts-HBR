@@ -1,11 +1,15 @@
 let cardData = []; // カードデータを保存するグローバル変数
+let unitSeasons = {}; // ← 追加: 部隊ごとのシーズンデータを保存
 let isEndlessMode = false;// エンドレスモードの状態を追跡する変数
 // JSONファイルを読み込む関数
 fetch('/data/cards.json')
   .then(response => response.json())
   .then(data => {
-    cardData = data; // グローバル変数に保存
-    displayCards(cardData); // 初期状態でカードを表示
+    // ▼ 変更: JSONの階層化に合わせてそれぞれのデータを変数に格納
+    unitSeasons = data.unit_seasons || {};
+    cardData = data.characters || [];
+    
+    displayCards(cardData); // 初期状態でカードを表示[cite: 1]
     loadDeckFromURL();
   })
   .catch(error => {
@@ -208,12 +212,17 @@ document.getElementById("search-button").addEventListener("click", () => {
 
   const filteredCards = cardData.filter(card => {
     const matchesFavorites = showFavorites ? favoriteCards[card.id] : true;
+    // ▼ 変更: season_group が設定されていればそれを、なければ unit を参照する
+    const targetGroup = card.season_group || card.unit; 
+    const availableSeasons = unitSeasons[targetGroup] || [];
+    
+    const matchesSeason = !season || availableSeasons.some(s => s.toLowerCase().includes(season));
     return (
       (!cost || card.cost.toString().includes(cost)) &&
       (!style || card.style.toLowerCase() === style) &&
       (!unit || card.unit.toLowerCase() === unit) &&
       (!type || card.type.toLowerCase().includes(type)) &&
-      (!season || card.season.toLowerCase().includes(season))&&
+      matchesSeason &&
       matchesFavorites
     );
   });
